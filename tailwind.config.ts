@@ -1,4 +1,7 @@
 import type { Config } from 'tailwindcss';
+import tokens from './src/tokens/tokens';
+
+const { colors, fontSize, boxShadow, borderRadius } = tokens;
 
 const config: Config = {
   content: [
@@ -7,8 +10,14 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    colors,
+    fontSize,
+    extend: {
+      boxShadow,
+      borderRadius,
+    },
   },
   plugins: [],
 };
+
 export default config;
