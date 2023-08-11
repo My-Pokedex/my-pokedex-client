@@ -28,6 +28,9 @@ const tokens = {
       70: '#146c43',
       90: '#0f5132',
     },
+    navy: {
+      10: '#0F0043',
+    },
     white: { 10: '#fefefe', 30: '#f9fafb', 50: '#f8f9fa' },
     gray: { 10: '#c6c7c8', 30: '#959596', 50: '#7a7c7f', 70: '#4d5154' },
     black: { 10: '#212529', 30: '#1a1e21', 50: '#141619' },
@@ -61,7 +64,13 @@ const tokens = {
       sum: '#a77cef',
     },
   },
-  fontSize: { base: '1rem', lg: '1.5rem', xl: '2rem', '2xl': '2.5rem' },
+  fontSize: {
+    base: '1rem',
+    lg: '1.25rem',
+    xl: '1.5rem',
+    '2xl': '2rem',
+    '3xl': '3rem',
+  },
   boxShadow: {
     'outer/down': '0px 4px 4px 0px rgba(0,0,0,0.25)',
     'outer/rightdown': '2px 2px 4px 0px rgba(0,0,0,0.3)',
