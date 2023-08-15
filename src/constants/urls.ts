@@ -1,6 +1,6 @@
 export const NAV_LINK_URL = {
   signin: '/signin',
   signout: '/',
-  searchResult: '/searchResult?sort=ascending',
+  searchResult: '/searchresult?keyword=&sort=ascending',
   compatibility: '/compatibility',
 } as const;
