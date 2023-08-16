@@ -74,7 +74,7 @@ const tokens = {
   boxShadow: {
     'outer/down': '0px 4px 4px 0px rgba(0,0,0,0.25)',
     'outer/rightdown': '2px 2px 4px 0px rgba(0,0,0,0.3)',
-    'inner/top/white': 'inset 1px 2px 4px 4px rgba(255,255,255,1)',
+    'inner/top/white': 'inset 1px 2px 4px 1.5px rgba(255,255,255,1)',
   },
   borderRadius: {
     none: '0',
@@ -86,6 +86,10 @@ const tokens = {
     '5xl': '1.625rem',
     '6xl': '2rem',
     '7xl': '2.5rem',
+  },
+  backgroundImage: {
+    rainbow:
+      'linear-gradient(90deg, #EA4335 0%, #FBBC05 32.81%, #34A853 66.67%, #4285F4 100%)',
   },
 };
 
