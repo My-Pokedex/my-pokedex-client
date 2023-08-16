@@ -1,6 +1,5 @@
-import Link from 'next/link';
 import localFont from 'next/font/local';
-import './globals.css';
+import '@/styles/globals.css';
 import type { Metadata } from 'next';
 
 const galmuri = localFont({
@@ -30,32 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={galmuri.className}>
-      <body>
+    <html lang="ko" className={`h-full ${galmuri.className}`}>
+      <body
+        className={`flex flex-col items-center justify-center h-full bg-[url('/assets/img/home_bg.jpg')] bg-cover bg-center bg-no-repeat`}>
         {children}
-        <ul className="border-4 border-gray-30">
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/signin">Signin</Link>
-          </li>
-          <li>
-            <Link href="/searchresult">Search Result</Link>
-          </li>
-          <li>
-            <Link href="/pokemon/1">Pokemon Info</Link>
-          </li>
-          <li>
-            <Link href="/compatibility">Compatibility</Link>
-          </li>
-          <li>
-            <Link href="/combinations/1">My Pokemon Combinations</Link>
-          </li>
-          <li>
-            <Link href="/combination/1/1">My Pokemon Combination</Link>
-          </li>
-        </ul>
       </body>
     </html>
   );
