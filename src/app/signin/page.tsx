@@ -1,3 +1,5 @@
+import Pokedex from '@components/Pokedex';
+
 export default function Signin() {
-  return <p>로그인 페이지입니다!</p>;
+  return <Pokedex className="mb-[5rem]"> </Pokedex>;
 }
