@@ -4,10 +4,12 @@ import SearchInput from '@components/SearchInput';
 
 export default function Home() {
   return (
-    <main>
-      <Logo location="main" />
-      <NavBar />홈 페이지입니다 : )
-      <SearchInput type="main" />
-    </main>
+    <>
+      <NavBar className="absolute top-[3.75rem] right-0 z-50" />
+      <main>
+        <Logo location="main" className="mb-[2.5rem]" />
+        <SearchInput type="main" className="mb-[7.5rem]" />
+      </main>
+    </>
   );
 }
