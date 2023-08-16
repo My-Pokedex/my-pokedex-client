@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss';
 import tokens from './src/tokens/tokens';
 
-const { colors, fontSize, boxShadow, borderRadius } = tokens;
+const { colors, fontSize, boxShadow, borderRadius, backgroundImage } = tokens;
 
 const config: Config = {
   content: [
@@ -15,6 +15,7 @@ const config: Config = {
     extend: {
       boxShadow,
       borderRadius,
+      backgroundImage,
     },
   },
   plugins: [],
