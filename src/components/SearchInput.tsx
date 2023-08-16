@@ -2,10 +2,16 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { twMerge } from 'tailwind-merge';
+import { DefaultProps } from '@/types/props';
 
 type InputType = 'main' | 'header';
 
-export default function SearchInput({ type }: { type: InputType }) {
+interface SearchInputProps extends DefaultProps {
+  type: InputType;
+}
+
+export default function SearchInput({ type, className }: SearchInputProps) {
   const router = useRouter();
   const [keyword, setKeyword] = useState('');
 
@@ -35,7 +41,10 @@ export default function SearchInput({ type }: { type: InputType }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`relative flex items-center border-blue-50 rounded-full shadow-outer/down ${formStyle[type]}`}>
+      className={twMerge(
+        `relative flex items-center border-blue-50 bg-white-10 rounded-full shadow-outer/down ${formStyle[type]}`,
+        className,
+      )}>
       <input
         type="search"
         placeholder="포켓몬 이름을 입력하세요."
@@ -46,7 +55,7 @@ export default function SearchInput({ type }: { type: InputType }) {
         type="submit"
         title="검색하기"
         value=""
-        className={`absolute bg-[url('/assets/img/search_button.svg')] ${submitInputStyle[type]}`}
+        className={`absolute bg-[url('/assets/img/search_button.svg')] cursor-pointer ${submitInputStyle[type]}`}
       />
     </form>
   );
