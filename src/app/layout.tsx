@@ -30,10 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={`h-full ${galmuri.className}`}>
-      <body
-        className={`flex flex-col items-center justify-center h-full bg-[url('/assets/img/home_bg.jpg')] bg-cover bg-center bg-no-repeat`}>
-        {children}
-      </body>
+      <body className="h-full">{children}</body>
     </html>
   );
 }
