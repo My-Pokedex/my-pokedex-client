@@ -43,3 +43,12 @@ export const TYPE_TAG_BG = {
   steel: `bg-[url('/assets/icon/steel.svg')] bg-type-steel`,
   fairy: `bg-[url('/assets/icon/fairy.svg')] bg-type-fairy`,
 } as const;
+
+export const COMMON_BUTTON_BG = {
+  area: 'bg-yellow-50',
+  viewAll: 'bg-yellow-50',
+  move: 'bg-blue-10',
+  viewCompatibility: 'bg-yellow-50',
+  newCombination: 'bg-red-30',
+  share: 'bg-yellow-50',
+} as const;
