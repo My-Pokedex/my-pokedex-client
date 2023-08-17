@@ -38,3 +38,12 @@ export const TYPE_TAG_CONTENTS = {
   steel: '강철',
   fairy: '페어리',
 } as const;
+
+export const COMMON_BUTTON_CONTENTS = {
+  area: '출현 장소',
+  viewAll: '전체 보기',
+  move: '배우는 기술',
+  viewCompatibility: '전체 상성표 보기',
+  newCombination: '새로운 조합 만들기',
+  share: '카카오톡 공유하기',
+} as const;
