@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { DefaultProps } from '@/types/props';
+import { DefaultProps } from '@/types/common';
 import { HEADER_LINK_TITLES } from '@/constants/contents';
 
 interface HeaderLinkProps extends DefaultProps {
