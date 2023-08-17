@@ -1,6 +1,5 @@
 import { DefaultProps } from '@/types/common';
 import { AUTH_BUTTON_CONTENTS } from '@/constants/contents';
-import { AUTH_BUTTON_BG } from '@/constants/styles';
 
 type AuthType = 'kakao' | 'naver' | 'google';
 
@@ -16,3 +15,9 @@ export default function AuthButton({ type }: AuthButtonProps) {
     </button>
   );
 }
+
+const AUTH_BUTTON_BG = {
+  kakao: 'bg-[#F9E000]',
+  naver: 'bg-[#33CE00]',
+  google: 'bg-rainbow',
+} as const;

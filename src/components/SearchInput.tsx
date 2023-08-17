@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { twMerge } from 'tailwind-merge';
 import { DefaultProps } from '@/types/common';
-import { SEARCH_INPUT_SIZE } from '@/constants/styles';
 
 type InputType = 'main' | 'header';
 
@@ -46,3 +45,16 @@ export default function SearchInput({ type, className }: SearchInputProps) {
     </form>
   );
 }
+
+const SEARCH_INPUT_SIZE = {
+  main: {
+    form: 'w-[30.625rem] h-[4.125rem] border-[.3125rem]',
+    search: 'w-[25.25rem] ml-[1.25rem] text-xl',
+    submit: 'top-[.625rem] right-[.625rem] w-[2.25rem] h-[2.25rem]',
+  },
+  header: {
+    form: 'w-[16.625rem] h-[2.875rem] border-[.1875rem]',
+    search: 'w-[13rem] ml-[.75rem] text-base',
+    submit: 'top-[.5rem] right-[.5rem] w-[1.5rem] h-[1.5rem] bg-cover',
+  },
+} as const;
