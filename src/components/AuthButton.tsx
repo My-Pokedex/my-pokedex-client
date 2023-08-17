@@ -1,4 +1,4 @@
-import { DefaultProps } from '@/types/props';
+import { DefaultProps } from '@/types/common';
 import { AUTH_BUTTON_CONTENTS } from '@/constants/contents';
 
 type AuthType = 'kakao' | 'naver' | 'google';

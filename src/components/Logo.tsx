@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
 import { LOGO_SIZE } from '@/constants/styles';
-import { DefaultProps } from '@/types/props';
+import { DefaultProps } from '@/types/common';
 
 type Location = 'main' | 'pokedex' | 'header';
 

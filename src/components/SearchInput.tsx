@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { twMerge } from 'tailwind-merge';
-import { DefaultProps } from '@/types/props';
+import { DefaultProps } from '@/types/common';
 
 type InputType = 'main' | 'header';
 
