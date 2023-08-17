@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
 import { LOGO_URL } from '@/constants/urls';
-import { LOGO_SIZE } from '@/constants/styles';
 import { DefaultProps } from '@/types/common';
 
 type Location = 'main' | 'pokedex' | 'header';
@@ -26,3 +25,9 @@ export default function Logo({ location, className }: LogoProps) {
     </Link>
   );
 }
+
+const LOGO_SIZE = {
+  main: [380, 140],
+  pokedex: [178, 66],
+  header: [132, 48],
+} as const;
