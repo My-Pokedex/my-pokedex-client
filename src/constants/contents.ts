@@ -17,3 +17,24 @@ export const HEADER_LINK_TITLES = {
   signin: '로그인',
   signout: '로그아웃',
 } as const;
+
+export const TYPE_TAG_CONTENTS = {
+  normal: '노말',
+  fire: '불꽃',
+  water: '물',
+  grass: '풀',
+  electric: '전기',
+  ice: '얼음',
+  psychic: '에스퍼',
+  dragon: '드래곤',
+  fighting: '격투',
+  flying: '비행',
+  ground: '땅',
+  rock: '바위',
+  bug: '벌레',
+  ghost: '고스트',
+  posion: '독',
+  dark: '악',
+  steel: '강철',
+  fairy: '페어리',
+} as const;

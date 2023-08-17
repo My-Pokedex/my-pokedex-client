@@ -1,6 +1,6 @@
 import { twMerge } from 'tailwind-merge';
 import NavLink from './NavLink';
-import { DefaultProps } from '@/types/props';
+import { DefaultProps } from '@/types/common';
 
 export default function NavBar({ className }: DefaultProps) {
   return (

@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import { DefaultProps } from '@/types/props';
+import { DefaultProps } from '@/types/common';
 
 interface PokedexProps extends DefaultProps {
   children: React.ReactNode;
