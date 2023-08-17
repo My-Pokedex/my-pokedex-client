@@ -55,7 +55,7 @@ export default function SearchInput({ type, className }: SearchInputProps) {
         type="submit"
         title="검색하기"
         value=""
-        className={`absolute bg-[url('/assets/img/search_button.svg')] cursor-pointer ${submitInputStyle[type]}`}
+        className={`absolute bg-[url('/assets/img/search.svg')] cursor-pointer ${submitInputStyle[type]}`}
       />
     </form>
   );
