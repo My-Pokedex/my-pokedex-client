@@ -1,5 +1,12 @@
-import HeaderLink from '@components/HeaderLink';
+import TypeTag from '@components/TypeTag';
 
 export default function SearchResult() {
-  return <>포켓몬 조합 페이지</>;
+  return (
+    <>
+      <TypeTag usage="button" type="fighting" />
+      <TypeTag usage="button" type="dragon" />
+      <TypeTag usage="info" type="psychic" />
+      <TypeTag usage="info" type="dark" />
+    </>
+  );
 }
