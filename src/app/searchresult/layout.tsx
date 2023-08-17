@@ -8,7 +8,7 @@ export default function SearchResultLayout({
   return (
     <>
       <Header />
-      <div className="flex flex-col items-center justify-center h-full bg-[url('/assets/img/bg_default.png')] bg-cover bg-center bg-no-repeat">
+      <div className="flex flex-col items-center h-full bg-[url('/assets/img/bg_default.png')] bg-cover bg-center bg-no-repeat">
         {children}
       </div>
     </>

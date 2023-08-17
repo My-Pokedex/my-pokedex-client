@@ -33,7 +33,7 @@ export const TYPE_TAG_CONTENTS = {
   rock: '바위',
   bug: '벌레',
   ghost: '고스트',
-  posion: '독',
+  poison: '독',
   dark: '악',
   steel: '강철',
   fairy: '페어리',
@@ -46,4 +46,9 @@ export const COMMON_BUTTON_CONTENTS = {
   viewCompatibility: '전체 상성표 보기',
   newCombination: '새로운 조합 만들기',
   share: '카카오톡 공유하기',
+} as const;
+
+export const TYPE_FILTERS_TITLES = {
+  search: '타입별 보기',
+  compatibility: '타입별 상성 보기',
 } as const;
