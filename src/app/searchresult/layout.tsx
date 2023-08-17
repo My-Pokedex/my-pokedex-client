@@ -1,4 +1,4 @@
-export default function SigninLayout({
+export default function SearchResultLayout({
   children,
 }: {
   children: React.ReactNode;
