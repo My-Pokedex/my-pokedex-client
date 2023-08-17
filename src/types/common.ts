@@ -17,7 +17,7 @@ export type PokemonType =
   | 'rock'
   | 'bug'
   | 'ghost'
-  | 'posion'
+  | 'poison'
   | 'dark'
   | 'steel'
   | 'fairy';
