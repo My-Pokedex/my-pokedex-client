@@ -15,3 +15,8 @@ export const SORT_QUERIES = [
   'weight-ascending',
   'weight-descending',
 ] as const;
+
+export const POKEMON_IMAGE_URL = {
+  gif: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/',
+  png: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/',
+} as const;
