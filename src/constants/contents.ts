@@ -52,3 +52,12 @@ export const TYPE_FILTERS_TITLES = {
   search: '타입별 보기',
   compatibility: '타입별 상성 보기',
 } as const;
+
+export const OPTION_CONTENTS = [
+  '도감 번호 작은 순',
+  '도감 번호 큰 순',
+  '키가 작은 순',
+  '키가 큰 순',
+  '가벼운 순',
+  '무거운 순',
+] as const;
