@@ -32,7 +32,7 @@ export default function Dropdown() {
         role="combobox"
         type="button"
         onClick={handleDropdownClick}
-        className={`relative min-w-[11rem] pl-4 py-[.375rem] mb-2 border-4 rounded-2xl bg-white-10 text-xl font-bold text-left shadow-outer/down after:absolute after:top-[1.125rem] after:right-[.875rem] after:block after:content-[''] after:w-[1.375rem] after:h-[.875rem] after:bg-[url('/assets/img/arrow.svg')] ${
+        className={`relative min-w-[11rem] pl-4 py-[.875rem] mb-2 border-4 rounded-2xl bg-white-10 text-xl font-bold text-left shadow-outer/down after:absolute after:top-[1.125rem] after:right-[.875rem] after:block after:content-[''] after:w-[1.375rem] after:h-[.875rem] after:bg-[url('/assets/img/arrow.svg')] ${
           isOpen && DROPDOWN_SCALE
         }`}>
         정렬 방식
@@ -47,7 +47,7 @@ export default function Dropdown() {
               key={index}
               role="option"
               data-order={index}
-              className={`relative py-3 text-center cursor-pointer ${
+              className={`relative py-[.875rem] text-center cursor-pointer ${
                 index !== 0 && OPTION_DIVIDE
               }`}>
               {optionName}
