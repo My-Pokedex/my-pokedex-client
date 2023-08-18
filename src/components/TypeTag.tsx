@@ -9,19 +9,22 @@ interface TypeTagProps extends DefaultProps {
 }
 
 export default function TypeTag({ usage, type }: TypeTagProps) {
+  const tagName = TYPE_TAG_CONTENTS[type];
+
   return (
     <>
       {usage === 'button' && (
         <button
           type="button"
+          data-tag-name={type}
           className={`py-1 pl-[2.125rem] pr-[.625rem] rounded text-white-10 shadow-outer/down bg-[length:24px_24px] bg-[center_left_6px] bg-no-repeat whitespace-nowrap ${TYPE_TAG_BG[type]}`}>
-          {TYPE_TAG_CONTENTS[type]}
+          {tagName}
         </button>
       )}
       {usage === 'info' && (
         <p
           className={`py-[.1875rem] pl-[1.5625rem] pr-[.4375rem] rounded text-[.75rem] text-white-10 shadow-outer/down bg-[length:18px_18px] bg-[center_left_4px] bg-no-repeat whitespace-nowrap ${TYPE_TAG_BG[type]}`}>
-          {TYPE_TAG_CONTENTS[type]}
+          {tagName}
         </p>
       )}
     </>
