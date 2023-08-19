@@ -34,7 +34,7 @@ export default function TypeFilters({ usage, lang }: TypeFiltersProps) {
   return (
     <div
       onClick={handleClick}
-      className="flex flex-col items-center max-w-[50.5rem] min-w-[17.5rem] px-3 pt-6 pb-5 mx-5 mt-[3.75rem] border-4 rounded-2xl bg-white-10 shadow-outer/down">
+      className="flex flex-col items-center max-w-[50.5rem] min-w-[15.75rem] px-4 pt-6 pb-5 border-4 rounded-2xl bg-white-10 shadow-outer/down">
       <h3 className="mb-6 text-2xl font-bold">{TYPE_FILTERS_TITLES[usage]}</h3>
       <ul className="relative flex flex-wrap justify-center space-x-[.625rem] max-w-[48.1875rem] mb-4">
         {tagNames.map((name, index) => (
