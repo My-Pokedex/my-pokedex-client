@@ -1,12 +1,12 @@
-import { PokemonEnType, PokemonKrType } from './common';
+import { PokemonType } from './common';
 
-export interface PokemonInfo {
+export interface RawPokemonCardInfo {
   enName: string;
   id: number;
   types: {
-    type: { name: PokemonType };
+    type: { name: string };
   }[];
   specy: { krName: { name: string }[] };
 }
 
-export type PokemonCardsInfo = PokemonInfo[];
+export type RawPokemonCardsInfo = RawPokemonCardInfo[];

@@ -17,6 +17,10 @@ const config: Config = {
       borderRadius,
       backgroundImage,
     },
+    screens: {
+      '1col': '585px',
+      '2col': '850px',
+    },
   },
   plugins: [],
 };
