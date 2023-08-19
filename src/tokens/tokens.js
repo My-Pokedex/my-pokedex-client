@@ -58,10 +58,10 @@ const tokens = {
       hp: '#e44343',
       attack: '#ef8941',
       defense: '#f2c81f',
-      specialAttack: '#7195e9',
-      specialDefense: '#79c653',
+      's-attack': '#7195e9',
+      's-defense': '#79c653',
       speed: '#ee759a',
-      sum: '#a77cef',
+      total: '#a77cef',
     },
   },
   fontSize: {
