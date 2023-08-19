@@ -14,6 +14,7 @@ export default async function PokemonImage({
   type,
   id,
   name,
+  ...props
 }: PokemonImageProps) {
   const { imgUrl, format } = await getImageInfo(id);
 
@@ -25,6 +26,7 @@ export default async function PokemonImage({
       alt={`${name}의 모습`}
       width={imgSize}
       height={imgSize}
+      {...props}
     />
   );
 }

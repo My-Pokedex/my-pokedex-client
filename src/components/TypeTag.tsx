@@ -1,35 +1,38 @@
-import { DefaultProps, PokemonType } from '@/types/common';
-import { TYPE_TAG_CONTENTS } from '@/constants/contents';
+import { DefaultProps, Lang, PokemonType } from '@/types/common';
+import { convertTagName } from '@/utils/convertTagName';
 
 type TagUsage = 'button' | 'info';
+type TagSize = 'small' | 'large';
 
 interface TypeTagProps extends DefaultProps {
   usage: TagUsage;
   type: PokemonType;
+  size: TagSize;
+  lang: Lang;
 }
 
-export default function TypeTag({ usage, type }: TypeTagProps) {
-  const tagName = TYPE_TAG_CONTENTS[type];
+export default function TypeTag({ usage, type, size, lang }: TypeTagProps) {
+  const tagStyle = `rounded text-white-10 shadow-outer/down bg-no-repeat whitespace-nowrap ${TYPE_TAG_SIZE[size]} ${TYPE_TAG_BG[type]}`;
+  const tagName = convertTagName(lang, type);
 
   return (
     <>
       {usage === 'button' && (
-        <button
-          type="button"
-          data-tag-name={type}
-          className={`py-2 pl-[2.125rem] pr-[.625rem] rounded text-white-10 shadow-outer/down bg-[length:24px_24px] bg-[center_left_6px] bg-no-repeat whitespace-nowrap ${TYPE_TAG_BG[type]}`}>
+        <button type="button" data-tag-name={type} className={tagStyle}>
           {tagName}
         </button>
       )}
-      {usage === 'info' && (
-        <p
-          className={`py-1 pl-[1.5625rem] pr-[.4375rem] rounded text-[.75rem] text-white-10 shadow-outer/down bg-[length:18px_18px] bg-[center_left_4px] bg-no-repeat whitespace-nowrap ${TYPE_TAG_BG[type]}`}>
-          {tagName}
-        </p>
-      )}
+      {usage === 'info' && <p className={tagStyle}>{tagName}</p>}
     </>
   );
 }
+
+const TYPE_TAG_SIZE = {
+  small:
+    'py-1 pl-[1.5625rem] pr-[.4375rem] text-[.75rem] bg-[length:18px_18px] bg-[center_left_4px]',
+  large:
+    'py-2 pl-[2.125rem] pr-[.625rem] bg-[length:24px_24px] bg-[center_left_6px]',
+} as const;
 
 const TYPE_TAG_BG = {
   normal: `bg-[url('/assets/icon/normal.svg')] bg-type-normal`,
