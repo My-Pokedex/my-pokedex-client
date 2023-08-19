@@ -3,16 +3,17 @@
 import { useRouter } from 'next/navigation';
 import TypeTag from './TypeTag';
 import CommonButton from './CommonButton';
-import { DefaultProps, PokemonType } from '@/types/common';
+import { DefaultProps, Lang, PokemonType } from '@/types/common';
 import { TYPE_TAG_CONTENTS, TYPE_FILTERS_TITLES } from '@/constants/contents';
 
 type FilterUsage = 'search' | 'compatibility';
 
 interface TypeFiltersProps extends DefaultProps {
   usage: FilterUsage;
+  lang: Lang;
 }
 
-export default function TypeFilters({ usage }: TypeFiltersProps) {
+export default function TypeFilters({ usage, lang }: TypeFiltersProps) {
   const router = useRouter();
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -38,7 +39,7 @@ export default function TypeFilters({ usage }: TypeFiltersProps) {
       <ul className="relative flex flex-wrap justify-center space-x-[.625rem] max-w-[48.1875rem] mb-4">
         {tagNames.map((name, index) => (
           <li key={index} className="mb-[.625rem]">
-            <TypeTag usage="button" type={name} />
+            <TypeTag usage="button" type={name} size="large" lang={lang} />
           </li>
         ))}
       </ul>
