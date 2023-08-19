@@ -24,25 +24,14 @@ export type PokemonType =
   | 'steel'
   | 'fairy';
 
-// export type PokemonKrType =
-//   | '노말'
-//   | '불꽃'
-//   | '물'
-//   | '풀'
-//   | '전기'
-//   | '얼음'
-//   | '에스퍼'
-//   | '드래곤'
-//   | '격투'
-//   | '비행'
-//   | '땅'
-//   | '바위'
-//   | '벌레'
-//   | '고스트'
-//   | '독'
-//   | '악'
-//   | '강철'
-//   | '페어리';
+export type PokemonStat =
+  | 'hp'
+  | 'attack'
+  | 'defense'
+  | 's-attack'
+  | 's-defense'
+  | 'speed'
+  | 'total';
 
 export interface PokemonCardInfo {
   id: number;

@@ -61,3 +61,13 @@ export const OPTION_CONTENTS = [
   '가벼운 순',
   '무거운 순',
 ] as const;
+
+export const INFO_TAG_STAT_CONTENTS = {
+  hp: 'HP',
+  attack: '공격',
+  defense: '방어',
+  's-attack': '특수공격',
+  's-defense': '특수방어',
+  speed: '스피드',
+  total: '총합',
+} as const;
