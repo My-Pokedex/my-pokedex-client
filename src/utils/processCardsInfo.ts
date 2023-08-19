@@ -1,12 +1,16 @@
-import { Lang } from '@/types/common';
-import { PokemonCardsInfo } from '@/types/data';
+import { Lang, PokemonType } from '@/types/common';
+import { RawPokemonCardsInfo } from '@/types/data';
 
-export const processCardsInfo = (info: PokemonCardsInfo, lang: Lang) => {
+export const processCardsInfo = (info: RawPokemonCardsInfo, lang: Lang) => {
   const newCardsInfo = info.map(({ enName, id, types, specy }) => {
     const name = lang === 'kr' ? specy.krName[0].name : enName;
-    const newTypes = types.map(({ type }) => type.name);
 
-    return { id, name, types: newTypes, isCatched: false };
+    return {
+      id,
+      name,
+      types: types.map(({ type }) => type.name) as PokemonType[],
+      isCatched: false,
+    };
   });
 
   return newCardsInfo;

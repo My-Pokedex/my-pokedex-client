@@ -30,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={`h-full ${galmuri.className}`}>
-      <body className="h-full">{children}</body>
+      <body className="h-full bg-[#7FAD71]">{children}</body>
     </html>
   );
 }
