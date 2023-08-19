@@ -379,42 +379,6 @@
             }
           ]
         }
-      },
-      {
-        "enName": "rattata",
-        "id": 19,
-        "types": [
-          {
-            "type": {
-              "name": "normal"
-            }
-          }
-        ],
-        "specy": {
-          "krName": [
-            {
-              "name": "꼬렛"
-            }
-          ]
-        }
-      },
-      {
-        "enName": "raticate",
-        "id": 20,
-        "types": [
-          {
-            "type": {
-              "name": "normal"
-            }
-          }
-        ],
-        "specy": {
-          "krName": [
-            {
-              "name": "레트라"
-            }
-          ]
-        }
       }
     ]
   }
