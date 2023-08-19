@@ -43,3 +43,10 @@ export type PokemonType =
 //   | '악'
 //   | '강철'
 //   | '페어리';
+
+export interface PokemonCardInfo {
+  id: number;
+  name: string;
+  types: PokemonType[];
+  isCatched: boolean;
+}
