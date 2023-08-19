@@ -17,12 +17,14 @@ export default async function PokemonImage({
 }: PokemonImageProps) {
   const { imgUrl, format } = await getImageInfo(id);
 
+  const imgSize = POKEMON_IMAGE_SIZE[format][type];
+
   return (
     <Image
       src={imgUrl}
       alt={`${name}의 모습`}
-      width={POKEMON_IMAGE_SIZE[format][type]}
-      height={POKEMON_IMAGE_SIZE[format][type]}
+      width={imgSize}
+      height={imgSize}
     />
   );
 }
