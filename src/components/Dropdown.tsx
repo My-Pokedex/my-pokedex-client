@@ -26,7 +26,7 @@ export default function Dropdown() {
   };
 
   return (
-    <div className="ml-auto mr-5">
+    <div className="relative ml-auto">
       <h3 className="sr-only">정렬해서 보기</h3>
       <button
         role="combobox"
@@ -41,7 +41,7 @@ export default function Dropdown() {
         <ul
           role="listbox"
           onClick={handleOptionClick}
-          className="max-w-[11rem] border-4 rounded-2xl bg-white-10 shadow-outer/down">
+          className="absolute top-[4.25rem] min-w-[11rem] border-4 rounded-2xl bg-white-10 shadow-outer/down z-50">
           {OPTION_CONTENTS.map((optionName, index) => (
             <li
               key={index}
