@@ -18,23 +18,26 @@ export default function PokemonCard({
 
   return (
     <article>
-      <h3 className="sr-only">{name}</h3>
       <Link
         href={`/pokemon/${id}`}
         className="relative flex flex-col justify-between w-[16.125rem] h-[15.75rem] p-4 border-4 border-black-50 rounded-2xl bg-white-10 shadow-outer/down">
         <PokemonTitle usage="card" id={id} name={name} />
         <PokemonImage
-          type="small"
+          size="small"
           id={id}
           name={name}
           className="absolute left-2/4 bottom-[3.75rem] -translate-x-2/4"
         />
-        <div className="flex justify-center space-x-2">
+        <div className="flex justify-center gap-2">
           {types.map((type) => (
             <TypeTag usage="info" type={type} size="large" lang={lang} />
           ))}
         </div>
-        <CatchButton isCatched={isCatched} className="top-4 right-3" />
+        <CatchButton
+          size="small"
+          isCatched={isCatched}
+          className="top-4 right-3"
+        />
       </Link>
     </article>
   );
