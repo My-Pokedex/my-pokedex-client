@@ -14,3 +14,15 @@ html {
 .info-desc {
   color: #4d5154;
 }
+
+.container-type {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.container-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
