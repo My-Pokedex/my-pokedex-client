@@ -1,5 +1,5 @@
-import { DefaultProps } from '@/types/common';
 import { twMerge } from 'tailwind-merge';
+import { DefaultProps } from '@/types/common';
 
 type ButtonSize = 'small' | 'large';
 

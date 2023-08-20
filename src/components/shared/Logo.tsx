@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
-import { LOGO_URL } from '@/constants/urls';
 import { DefaultProps } from '@/types/common';
+import { LOGO_URL } from '@/constants/urls';
 
 type Location = 'main' | 'pokedex' | 'header';
 

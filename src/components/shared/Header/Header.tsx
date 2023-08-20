@@ -1,5 +1,4 @@
-import Logo from './Logo';
-import SearchInput from './SearchInput';
+import { Logo, SearchInput } from '@/components';
 import HeaderLink from './HeaderLink';
 
 export default function Header() {

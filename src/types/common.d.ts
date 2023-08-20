@@ -2,6 +2,8 @@ export interface DefaultProps {
   className?: string;
 }
 
+export type ContainerUsage = 'div' | 'section';
+
 export type Lang = 'kr' | 'en';
 
 export type PokemonType =
@@ -33,10 +35,13 @@ export type PokemonStat =
   | 'speed'
   | 'total';
 
-export interface PokemonCardInfo {
+export interface PokemonBasicInfo {
   id: number;
   name: string;
   types: PokemonType[];
+}
+
+export interface PokemonCardInfo extends PokemonBasicInfo {
   isCatched: boolean;
 }
 
