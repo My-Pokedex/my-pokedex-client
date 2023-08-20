@@ -1,11 +1,5 @@
 import Link from 'next/link';
-import {
-  PokemonTitle,
-  PokemonImage,
-  TypeTagContainer,
-  TypeTag,
-  CatchButton,
-} from '@/components';
+import { PokemonTitle, PokemonImage, TypeTag, CatchButton } from '@/components';
 import { DefaultProps, Lang, PokemonCardInfo } from '@/types/common';
 
 interface PokemonCardProps extends DefaultProps {
@@ -31,11 +25,11 @@ export default function PokemonCard({
           name={name}
           className="absolute left-2/4 bottom-[3.75rem] -translate-x-2/4"
         />
-        <TypeTagContainer usage="div">
+        <div className="container-type">
           {types.map((type) => (
             <TypeTag usage="info" type={type} size="large" lang={lang} />
           ))}
-        </TypeTagContainer>
+        </div>
         <CatchButton
           size="small"
           isCatched={isCatched}
