@@ -24,7 +24,10 @@ export default function TypeFilters({ usage, lang }: TypeFiltersProps) {
       const searchParams = new URLSearchParams(window.location.search);
       searchParams.set('type', newTypeQuery);
 
-      router.push(`/searchresult?${searchParams.toString()}`);
+      usage === 'search' &&
+        router.push(`/searchresult?${searchParams.toString()}`);
+      usage === 'compatibility' &&
+        router.push(`/compatibility?${searchParams.toString()}`);
     }
   };
 
