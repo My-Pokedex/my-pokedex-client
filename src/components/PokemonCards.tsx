@@ -13,7 +13,7 @@ export default function PokemonCards({
   return (
     <section
       className={
-        'grid grid-cols-3 gap-4 max-2col:grid-cols-2 max-1col:grid-cols-1 mb-[5rem]'
+        'grid grid-cols-3 gap-4 max-2cards:grid-cols-2 max-1cards:grid-cols-1 mb-[5rem]'
       }>
       <h2 className="sr-only">검색 결과</h2>
       {pokemonCardsInfo.map((pokemonCardInfo) => (

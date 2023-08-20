@@ -12,8 +12,8 @@ interface TypeTagProps extends DefaultProps {
 }
 
 export default function TypeTag({ usage, type, size, lang }: TypeTagProps) {
-  const tagStyle = `rounded text-white-10 shadow-outer/down bg-no-repeat whitespace-nowrap ${TYPE_TAG_SIZE[size]} ${TYPE_TAG_BG[type]}`;
-  const tagName = convertTypeTagName(lang, type);
+  const tagStyle = `w-max rounded text-white-10 shadow-outer/down bg-no-repeat whitespace-nowrap ${TYPE_TAG_SIZE[size]} ${TYPE_TAG_BG[type]}`;
+  const tagName = convertTypeTagName(type, lang);
 
   return (
     <>

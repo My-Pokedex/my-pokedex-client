@@ -39,3 +39,19 @@ export interface PokemonCardInfo {
   types: PokemonType[];
   isCatched: boolean;
 }
+
+export type Ability = { isHidden: boolean; name: string; description: string };
+export type Evolution = { id: number; name: string; types: PokemonType[] };
+
+export interface PokemonDetailInfo {
+  id: number;
+  name: string;
+  types: PokemonType[];
+  feature: string | null;
+  description: string | null;
+  height: number;
+  weight: number;
+  abilities: Ability[] | null;
+  stats: number[];
+  evolutionChain: Evolution[] | null;
+}
