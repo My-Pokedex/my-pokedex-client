@@ -4,7 +4,7 @@ export const NAV_LINK_URL = {
   signin: '/signin',
   signout: '/',
   searchResult: '/searchresult?keyword=&type=all&sort=id-ascending',
-  compatibility: '/compatibility',
+  compatibility: '/compatibility?type=normal',
 } as const;
 
 export const SORT_QUERIES = [

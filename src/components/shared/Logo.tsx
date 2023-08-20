@@ -30,6 +30,6 @@ export default function Logo({ location, className }: LogoProps) {
 
 const LOGO_SIZE = {
   main: [380, 140],
-  pokedex: [178, 66],
+  pokedex: [152, 56],
   header: [92, 32],
 } as const;
