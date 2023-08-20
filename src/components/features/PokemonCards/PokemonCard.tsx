@@ -1,9 +1,12 @@
-import PokemonTitle from './PokemonTitle';
-import PokemonImage from './PokemonImage';
-import TypeTag from './TypeTag';
-import CatchButton from './CatchButton';
-import { DefaultProps, Lang, PokemonCardInfo } from '@/types/common';
 import Link from 'next/link';
+import {
+  PokemonTitle,
+  PokemonImage,
+  TypeTagContainer,
+  TypeTag,
+  CatchButton,
+} from '@/components';
+import { DefaultProps, Lang, PokemonCardInfo } from '@/types/common';
 
 interface PokemonCardProps extends DefaultProps {
   pokemonCardInfo: PokemonCardInfo;
@@ -28,11 +31,11 @@ export default function PokemonCard({
           name={name}
           className="absolute left-2/4 bottom-[3.75rem] -translate-x-2/4"
         />
-        <div className="flex justify-center gap-2">
+        <TypeTagContainer usage="div">
           {types.map((type) => (
             <TypeTag usage="info" type={type} size="large" lang={lang} />
           ))}
-        </div>
+        </TypeTagContainer>
         <CatchButton
           size="small"
           isCatched={isCatched}
