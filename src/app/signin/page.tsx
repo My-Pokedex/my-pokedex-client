@@ -2,7 +2,7 @@ import { Pokedex, AuthButton, Logo } from '@/components';
 
 export default function Signin() {
   return (
-    <Pokedex className="relative mb-[5rem]">
+    <Pokedex className="min-h-[29.875rem] mb-[5rem]">
       <p className="absolute top-[11.25rem] right-[6.375rem] text-lg font-bold text-white-10">
         환영합니다 : )
       </p>
