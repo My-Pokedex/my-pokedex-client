@@ -1,6 +1,4 @@
-import Pokedex from '@components/Pokedex';
-import AuthButton from '@components/AuthButton';
-import Logo from '@components/Logo';
+import { Pokedex, AuthButton, Logo } from '@/components';
 
 export default function Signin() {
   return (

@@ -1,8 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import TypeTag from './TypeTag';
-import CommonButton from './CommonButton';
+import { TypeTag, CommonButton } from '@/components';
 import { DefaultProps, Lang, PokemonType } from '@/types/common';
 import { TYPE_TAG_CONTENTS, TYPE_FILTERS_TITLES } from '@/constants/contents';
 

@@ -17,6 +17,7 @@ export default function SearchInput({ type, className }: SearchInputProps) {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setKeyword(e.target.value);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 

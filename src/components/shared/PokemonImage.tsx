@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { DefaultProps } from '@/types/common';
 import { getImageInfo } from '@/utils/getImageInfo';
-import { twMerge } from 'tailwind-merge';
 
 type ImageSize = 'small' | 'large';
 
