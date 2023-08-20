@@ -18,8 +18,9 @@ const config: Config = {
       backgroundImage,
     },
     screens: {
-      '1col': '585px',
-      '2col': '850px',
+      '1evol': '410px',
+      '1cards': '585px',
+      '2cards': '850px',
     },
   },
   plugins: [],
