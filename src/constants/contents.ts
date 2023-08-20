@@ -71,3 +71,8 @@ export const INFO_TAG_STAT_CONTENTS = {
   speed: '스피드',
   total: '총합',
 } as const;
+
+export const SELECTED_TYPE_CONTENTS = {
+  kr: '선택한 타입 : ',
+  en: 'Selected : ',
+} as const;

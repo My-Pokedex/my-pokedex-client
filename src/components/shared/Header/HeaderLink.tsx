@@ -11,8 +11,14 @@ export default function HeaderLink({ destination }: HeaderLinkProps) {
     <Link
       href={`/${destination}`}
       title={HEADER_LINK_TITLES[destination]}
-      className="block w-[3.25rem] h-[3.25rem] drop-shadow-lg"
-      style={{ backgroundImage: `url('/assets/img/${destination}.svg')` }}
+      className={`block w-9 h-9 bg-cover drop-shadow-lg hover:scale-105 transition-all ease-in ${HEADER_LINK_BG[destination]}`}
     />
   );
 }
+
+const HEADER_LINK_BG = {
+  compatibility: `bg-[url('/assets/img/compatibility.svg')]`,
+  combinations: `bg-[url('/assets/img/combinations.svg')]`,
+  signin: `bg-[url('/assets/img/signin.svg')]`,
+  signout: `bg-[url('/assets/img/singout.svg')]`,
+} as const;

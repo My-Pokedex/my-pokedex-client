@@ -28,7 +28,7 @@ export default function SearchInput({ type, className }: SearchInputProps) {
     <form
       onSubmit={handleSubmit}
       className={twMerge(
-        `relative flex items-center border-blue-50 bg-white-10 rounded-full shadow-outer/down ${SEARCH_INPUT_SIZE[type].form}`,
+        `relative flex items-center w-max border-blue-50 bg-white-10 rounded-full shadow-outer/down ${SEARCH_INPUT_SIZE[type].form}`,
         className,
       )}>
       <input
@@ -54,8 +54,8 @@ const SEARCH_INPUT_SIZE = {
     submit: 'top-[.625rem] right-[.625rem] w-[2.25rem] h-[2.25rem]',
   },
   header: {
-    form: 'w-[16.625rem] h-[2.875rem] border-[.1875rem]',
-    search: 'w-[13rem] ml-[.75rem] text-base',
-    submit: 'top-[.5rem] right-[.5rem] w-[1.5rem] h-[1.5rem] bg-cover',
+    form: 'w-[12.5rem] h-8 border-[.1875rem]',
+    search: 'w-[10.625rem] ml-2 text-[.75rem]',
+    submit: 'top-[.3125rem] right-[.3125rem] w-4 h-4 bg-cover',
   },
 } as const;
