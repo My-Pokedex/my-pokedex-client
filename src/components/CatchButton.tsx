@@ -1,11 +1,15 @@
 import { DefaultProps } from '@/types/common';
 import { twMerge } from 'tailwind-merge';
 
+type ButtonSize = 'small' | 'large';
+
 interface CatchButtonProps extends DefaultProps {
+  size: ButtonSize;
   isCatched: boolean;
 }
 
 export default function CatchButton({
+  size,
   isCatched,
   className,
 }: CatchButtonProps) {
@@ -16,8 +20,8 @@ export default function CatchButton({
       className={twMerge(
         `absolute bg-no-repeat ${
           isCatched
-            ? `${CATCH_BUTTON_SIZE.release} ${CATCH_BUTTON_BG.release}`
-            : `${CATCH_BUTTON_SIZE.catch} ${CATCH_BUTTON_BG.catch}`
+            ? `${CATCH_BUTTON_SIZE[size].release} ${CATCH_BUTTON_BG[size].release}`
+            : `${CATCH_BUTTON_SIZE[size].catch} ${CATCH_BUTTON_BG[size].catch}`
         }`,
         className,
       )}
@@ -26,11 +30,23 @@ export default function CatchButton({
 }
 
 const CATCH_BUTTON_SIZE = {
-  catch: 'w-8 h-8',
-  release: 'w-8 h-[2.625rem]',
+  small: {
+    catch: 'w-8 h-8',
+    release: 'w-8 h-[2.625rem]',
+  },
+  large: {
+    catch: 'w-12 h-12',
+    release: 'w-12 h-16',
+  },
 } as const;
 
 const CATCH_BUTTON_BG = {
-  catch: `bg-[url('/assets/img/catch.svg')]`,
-  release: `bg-[url('/assets/img/release.svg')]`,
+  small: {
+    catch: `bg-[url('/assets/img/catch.svg')]`,
+    release: `bg-[url('/assets/img/release.svg')]`,
+  },
+  large: {
+    catch: `bg-[url('/assets/img/catch.svg')] bg-cover`,
+    release: `bg-[url('/assets/img/release.svg')] bg-cover`,
+  },
 } as const;
