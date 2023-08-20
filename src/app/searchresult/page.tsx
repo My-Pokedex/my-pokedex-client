@@ -7,7 +7,7 @@ export default function SearchResult() {
 
   return (
     <>
-      <section className="flex flex-col gap-4 mx-5 mt-[3.75rem] mb-4">
+      <section className="flex flex-col gap-4 mx-5 mt-8 mb-4">
         <h2 className="sr-only">필터 선택</h2>
         <TypeFilters usage="search" lang="kr" />
         <Dropdown />
