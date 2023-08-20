@@ -1,24 +1,25 @@
 import Image from 'next/image';
 import { DefaultProps } from '@/types/common';
 import { getImageInfo } from '@/utils/getImageInfo';
+import { twMerge } from 'tailwind-merge';
 
-type ImageType = 'small' | 'large';
+type ImageSize = 'small' | 'large';
 
 interface PokemonImageProps extends DefaultProps {
-  type: ImageType;
+  size: ImageSize;
   id: number;
   name: string;
 }
 
 export default async function PokemonImage({
-  type,
+  size,
   id,
   name,
   ...props
 }: PokemonImageProps) {
   const { imgUrl, format } = await getImageInfo(id);
 
-  const imgSize = POKEMON_IMAGE_SIZE[format][type];
+  const imgSize = POKEMON_IMAGE_SIZE[format][size];
 
   return (
     <Image
@@ -26,6 +27,7 @@ export default async function PokemonImage({
       alt={`${name}의 모습`}
       width={imgSize}
       height={imgSize}
+      style={{ width: imgSize, height: imgSize }}
       {...props}
     />
   );
