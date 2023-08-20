@@ -20,7 +20,9 @@ export default function Logo({ location, className }: LogoProps) {
         alt="홈 페이지로 이동"
         width={width}
         height={height}
+        priority={true}
         className={twMerge('mx-auto drop-shadow-lg', className)}
+        style={{ width: width, height: height }}
       />
     </Link>
   );
