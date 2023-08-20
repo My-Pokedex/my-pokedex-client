@@ -2,8 +2,6 @@ export interface DefaultProps {
   className?: string;
 }
 
-export type ContainerUsage = 'div' | 'section';
-
 export type Lang = 'kr' | 'en';
 
 export type PokemonType =
