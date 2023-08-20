@@ -2,6 +2,7 @@ import NavBar from './NavBar/NavBar';
 import PokemonCards from './PokemonCards/PokemonCards';
 import PokemonInfo from './PokemonInfo/PokemonInfo';
 import AuthButton from './AuthButton';
+import BattleInfo from './BattleInfo';
 import Dropdown from './Dropdown';
 import SelectedType from './SelectedType';
 
@@ -10,6 +11,7 @@ export {
   PokemonCards,
   PokemonInfo,
   AuthButton,
+  BattleInfo,
   Dropdown,
   SelectedType,
 };
