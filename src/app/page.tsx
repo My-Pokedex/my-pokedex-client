@@ -1,6 +1,4 @@
-import Logo from '@components/Logo';
-import NavBar from '@components/NavBar';
-import SearchInput from '@components/SearchInput';
+import { Logo, NavBar, SearchInput } from '@/components';
 
 export default function Home() {
   return (

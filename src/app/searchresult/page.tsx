@@ -1,6 +1,4 @@
-import TypeFilters from '@components/TypeFilters';
-import Dropdown from '@components/Dropdown';
-import PokemonCards from '@components/PokemonCards';
+import { TypeFilters, Dropdown, PokemonCards } from '@/components';
 import { processCardsInfo } from '@/utils/processCardsInfo';
 import pokemons from '@/mocks/pokemons.json';
 

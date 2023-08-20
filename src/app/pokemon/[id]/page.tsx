@@ -1,8 +1,7 @@
-import PokemonInfo from '@components/PokemonInfo';
+import { PokemonInfo, CatchButton } from '@/components';
+import { processDetailInfo } from '@/utils/processDetailInfo';
 import pokemonDefault from '@/mocks/pokemonDefault.json';
 import pokemonException from '@/mocks/pokemonException.json';
-import { processDetailInfo } from '@/utils/processDetailInfo';
-import CatchButton from '@components/CatchButton';
 
 export default function Pokemon() {
   const processed = processDetailInfo(pokemonDefault.data, 'kr');
