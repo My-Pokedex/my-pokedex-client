@@ -5,3 +5,12 @@
 html {
   line-height: 1;
 }
+
+.info-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.info-desc {
+  color: #4d5154;
+}
