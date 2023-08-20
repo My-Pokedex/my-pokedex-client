@@ -7,7 +7,7 @@ export default function Pokemon() {
   const processed = processDetailInfo(pokemonDefault.data, 'kr');
 
   return (
-    <main className="relative mx-5 mt-[3.75rem]">
+    <main className="relative mx-5 my-8">
       <h2 className="sr-only">{`${processed.name}의 상세 정보`}</h2>
       <PokemonInfo pokemonDetailInfo={processed} lang="kr" />
       <CatchButton

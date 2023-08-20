@@ -1,6 +1,6 @@
 import { Header } from '@/components';
 
-export default function PokemonLayout({
+export default function CompatibilityLayout({
   children,
 }: {
   children: React.ReactNode;
