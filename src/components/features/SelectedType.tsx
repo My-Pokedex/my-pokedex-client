@@ -1,4 +1,5 @@
-import { DefaultProps, Lang, PokemonType } from '@/types/common';
+import { twMerge } from 'tailwind-merge';
+import { DefaultProps, PokemonType, Lang } from '@/types/common';
 import { SELECTED_TYPE_CONTENTS } from '@/constants/contents';
 import { convertTypeTagName } from '@/utils/convertTypeTagName';
 
@@ -7,9 +8,17 @@ interface SelectedTypeProps extends DefaultProps {
   lang: Lang;
 }
 
-export default function SelectedType({ type, lang }: SelectedTypeProps) {
+export default function SelectedType({
+  type,
+  lang,
+  className,
+}: SelectedTypeProps) {
   return (
-    <p className="absolute text-lg font-bold text-white-10">
+    <p
+      className={twMerge(
+        'absolute w-[12.625rem] h-9 text-[1.125rem] font-bold text-white-10 text-center leading-9',
+        className,
+      )}>
       {SELECTED_TYPE_CONTENTS[lang]}
       <span className={TYPE_TEXT_COLOR[type]}>
         {convertTypeTagName(type, lang)}
