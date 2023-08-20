@@ -1,5 +1,5 @@
 import { DefaultProps } from '@/types/common';
-import { convertId } from '@/utils/convertId';
+import { convertIdToOrder } from '@/utils/convertIdToOrder';
 
 type TitleUsage = 'card' | 'detail' | 'evolution';
 
@@ -10,16 +10,29 @@ interface PokemonTitleProps extends DefaultProps {
 }
 
 export default function PokemonTitle({ usage, id, name }: PokemonTitleProps) {
+  const containerStyle = `flex flex-col flex-wrap justify-between ${TITLE_CONTAINER[usage]}`;
+  const orderStyle = `${TITLE_FONT_SIZE[usage].id}`;
+  const nameStyle = `font-bold ${TITLE_FONT_SIZE[usage].name}`;
+
+  const order = convertIdToOrder(id);
+
   return (
-    <dl
-      className={`flex flex-col flex-wrap justify-between ${TITLE_CONTAINER[usage]}`}>
-      <dt className="sr-only">도감 번호</dt>
-      <dd className={`${TITLE_FONT_SIZE[usage].id}`}>{`No.${convertId(
-        id,
-      )}`}</dd>
-      <dt className="sr-only">이름</dt>
-      <dd className={`font-bold ${TITLE_FONT_SIZE[usage].name}`}>{name}</dd>
-    </dl>
+    <>
+      {usage === 'detail' ? (
+        <section className={containerStyle}>
+          <h3 className="sr-only">도감 번호</h3>
+          <p className={orderStyle}>{order}</p>
+          <h3 className="sr-only">이름</h3>
+          <p className={nameStyle}>{name}</p>
+        </section>
+      ) : (
+        <div className={containerStyle}>
+          <p className={orderStyle}>{order}</p>
+          {usage === 'card' && <h3 className={nameStyle}>{name}</h3>}
+          {usage === 'evolution' && <h4 className={nameStyle}>{name}</h4>}
+        </div>
+      )}
+    </>
   );
 }
 
