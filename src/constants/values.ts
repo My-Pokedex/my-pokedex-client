@@ -1,3 +1,5 @@
+export const GIF_LIMIT = 650;
+
 export const CARDS_LIMIT = 18;
 
 export const BATTLE_INFO_VALUES = {
