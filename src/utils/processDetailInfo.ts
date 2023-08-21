@@ -45,7 +45,7 @@ export const processDetailInfo = (info: RawPokemonDetailInfo, lang: Lang) => {
 
   const newEvolutionChain =
     specy.length > 1
-      ? specy
+      ? [...specy]
           .sort((a, b) => a.id - b.id)
           .map((info) => {
             const { id, enName, koName, pokemonInfo } = info;
