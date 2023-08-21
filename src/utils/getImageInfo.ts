@@ -1,13 +1,15 @@
 import { POKEMON_IMAGE_URL } from '@/constants/urls';
+import { GIF_LIMIT } from '@/constants/values';
 
-export const getImageInfo = async (id: number) => {
-  const gifUrl = `${POKEMON_IMAGE_URL.gif}${id}.gif`;
-  const pngUrl = `${POKEMON_IMAGE_URL.png}${id}.png`;
-
-  const response = await fetch(gifUrl);
+export const getImageInfo = (id: number) => {
+  const imgUrl =
+    id < GIF_LIMIT
+      ? `${POKEMON_IMAGE_URL.gif}${id}.gif`
+      : `${POKEMON_IMAGE_URL.png}${id}.png`;
+  const format = id < GIF_LIMIT ? 'gif' : 'png';
 
   return {
-    imgUrl: response.ok ? gifUrl : pngUrl,
-    format: response.ok ? 'gif' : 'png',
+    imgUrl,
+    format,
   } as const;
 };

@@ -2,6 +2,6 @@ import { Lang } from '@/types/common';
 
 export const convertName = (
   enName: string,
-  krName: { name: string }[],
+  koName: { name: string }[],
   lang: Lang,
-) => (lang === 'kr' ? krName[0].name : enName);
+) => (lang === 'ko' ? koName[0].name : enName);

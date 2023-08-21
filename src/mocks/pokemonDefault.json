@@ -19,7 +19,7 @@
           }
         ],
         "specy": {
-          "krName": [
+          "koName": [
             {
               "name": "이상해꽃"
             }
@@ -62,7 +62,7 @@
               "contents": "Powers up Grass-type moves when the Pokémon’s\nHP is low."
             }
           ],
-          "krName": [
+          "koName": [
             {
               "name": "심록"
             }
@@ -81,7 +81,7 @@
               "contents": "Boosts the Pokémon’s Speed stat in harsh sunlight."
             }
           ],
-          "krName": [
+          "koName": [
             {
               "name": "엽록소"
             }
@@ -131,7 +131,7 @@
                 ]
               }
             ],
-            "krName": [
+            "koName": [
               {
                 "name": "이상해씨"
               }
@@ -184,7 +184,7 @@
                 ]
               }
             ],
-            "krName": [
+            "koName": [
               {
                 "name": "이상해꽃"
               }
@@ -209,7 +209,7 @@
                 ]
               }
             ],
-            "krName": [
+            "koName": [
               {
                 "name": "이상해풀"
               }

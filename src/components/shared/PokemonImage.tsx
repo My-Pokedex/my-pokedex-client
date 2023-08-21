@@ -10,13 +10,13 @@ interface PokemonImageProps extends DefaultProps {
   name: string;
 }
 
-export default async function PokemonImage({
+export default function PokemonImage({
   size,
   id,
   name,
   ...props
 }: PokemonImageProps) {
-  const { imgUrl, format } = await getImageInfo(id);
+  const { imgUrl, format } = getImageInfo(id);
 
   const imgSize = POKEMON_IMAGE_SIZE[format][size];
 
@@ -26,7 +26,8 @@ export default async function PokemonImage({
       alt={`${name}의 모습`}
       width={imgSize}
       height={imgSize}
-      style={{ width: imgSize, height: imgSize }}
+      loading="lazy"
+      style={{ width: imgSize, height: imgSize, objectFit: 'contain' }}
       {...props}
     />
   );

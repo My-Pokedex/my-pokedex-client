@@ -2,7 +2,7 @@ import { INFO_TAG_STAT_CONTENTS } from '@/constants/contents';
 import { Lang, PokemonStat } from '@/types/common';
 
 export const convertInfoTagName = (stat: PokemonStat, lang: Lang) => {
-  if (lang === 'kr') return INFO_TAG_STAT_CONTENTS[stat];
+  if (lang === 'ko') return INFO_TAG_STAT_CONTENTS[stat];
 
   switch (stat) {
     case 'hp':
