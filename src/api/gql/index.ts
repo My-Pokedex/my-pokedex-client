@@ -1,3 +1,4 @@
-import GET_POKEMONS from './getPokemons';
+import GET_LIST from './getList';
+import GET_DETAIL from './getDetail';
 
-export { GET_POKEMONS };
+export { GET_LIST, GET_DETAIL };
