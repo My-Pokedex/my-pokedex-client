@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-const GET_POKEMONS = gql`
+const GET_LIST = gql`
   query pokemonCardsInfoQuery(
     $limit: Int!
     $keyword: String!
@@ -48,4 +48,4 @@ const GET_POKEMONS = gql`
   }
 `;
 
-export default GET_POKEMONS;
+export default GET_LIST;

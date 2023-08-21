@@ -1,10 +1,22 @@
+'use client';
+
+import { useParams } from 'next/navigation';
+import { useQuery } from '@apollo/client';
+import { GET_DETAIL } from '@/api/gql';
 import { PokemonInfo, CatchButton } from '@/components';
 import { processDetailInfo } from '@/utils/processDetailInfo';
-import pokemonDefault from '@/mocks/pokemonDefault.json';
-import pokemonException from '@/mocks/pokemonException.json';
 
 export default function Pokemon() {
-  const processed = processDetailInfo(pokemonDefault.data, 'ko');
+  const params = useParams();
+
+  const { loading, error, data } = useQuery(GET_DETAIL, {
+    variables: { id: params.id },
+  });
+
+  if (loading) return null;
+  if (error) return `Error : ${error}`;
+
+  const processed = processDetailInfo(data, 'ko');
 
   return (
     <main className="relative mx-5 my-8">

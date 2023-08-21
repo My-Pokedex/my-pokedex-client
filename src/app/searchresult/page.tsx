@@ -1,15 +1,6 @@
-'use client';
-
 import { TypeFilters, Dropdown, PokemonCards } from '@/components';
-import { processCardsInfo } from '@/utils/processCardsInfo';
-import useSearch from '@/hooks/useSearch';
 
 export default function SearchResult() {
-  const { loading, error, pokemonCardsInfo } = useSearch();
-
-  if (loading) return null;
-  if (error) return `Error : ${error}`;
-
   return (
     <>
       <section className="flex flex-col gap-4 mx-5 mt-8 mb-4">
@@ -18,10 +9,7 @@ export default function SearchResult() {
         <Dropdown />
       </section>
       <main>
-        <PokemonCards
-          pokemonCardsInfo={processCardsInfo(pokemonCardsInfo, 'ko')}
-          lang="ko"
-        />
+        <PokemonCards lang="ko" />
       </main>
     </>
   );

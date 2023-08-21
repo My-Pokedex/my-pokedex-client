@@ -16,7 +16,7 @@ export default function StatInfo({ stats, lang }: StatInfoProps) {
       <h3 className="info-title">기본 능력치</h3>
       <div className="flex flex-wrap justify-center gap-3">
         {statNames.map((stat, index) => (
-          <div className="container-info gap-3">
+          <div key={index} className="container-info gap-3">
             <InfoTag usage="stat" stat={stat}>
               {convertInfoTagName(stat, lang)}
             </InfoTag>

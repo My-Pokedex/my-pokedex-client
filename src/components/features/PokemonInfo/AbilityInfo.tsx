@@ -13,7 +13,7 @@ export default function AbilityInfo({ abilities, types }: AbilityInfoProps) {
         const { isHidden, name, description } = abilitiy;
 
         return (
-          <section className="container-info gap-4">
+          <section key={name} className="container-info gap-4">
             <h3 className="info-title">{isHidden ? '숨겨진 특성' : '특성'}</h3>
             <InfoTag usage="ability" type={types[0]}>
               {name}
