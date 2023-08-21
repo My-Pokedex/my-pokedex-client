@@ -19,7 +19,7 @@ export default function Signin() {
       </ul>
       <Logo
         location="pokedex"
-        className="absolute right-[5.0625rem] bottom-[3.5625rem]"
+        className="absolute right-[5.5rem] bottom-[3.5625rem]"
       />
     </Pokedex>
   );

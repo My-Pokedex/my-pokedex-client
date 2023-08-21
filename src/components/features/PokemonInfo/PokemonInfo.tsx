@@ -40,8 +40,8 @@ export default function PokemonInfo({
         <EvolutionInfo evolutionChain={evolutionChain} lang={lang} />
       )}
       <div className="flex flex-wrap justify-center gap-5 mt-5">
-        <CommonButton type="area" />
-        <CommonButton type="move" />
+        <CommonButton type="area" lang={lang} />
+        <CommonButton type="move" lang={lang} />
       </div>
     </div>
   );

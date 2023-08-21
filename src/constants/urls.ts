@@ -1,10 +1,11 @@
 export const LOGO_URL = '/assets/img/logo.svg';
 
-export const NAV_LINK_URL = {
+export const LINK_DEFAULT_URL = {
   signin: '/signin',
   signout: '/',
   searchResult: '/searchresult?keyword=&type=all&sort=id-ascending',
   compatibility: '/compatibility?type=normal',
+  combinations: '/',
 } as const;
 
 export const SORT_QUERIES = [
