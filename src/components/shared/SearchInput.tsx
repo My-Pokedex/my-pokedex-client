@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { twMerge } from 'tailwind-merge';
 import { DefaultProps } from '@/types/common';
@@ -14,6 +14,7 @@ interface SearchInputProps extends DefaultProps {
 export default function SearchInput({ type, className }: SearchInputProps) {
   const router = useRouter();
   const [keyword, setKeyword] = useState('');
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setKeyword(e.target.value);
@@ -21,11 +22,14 @@ export default function SearchInput({ type, className }: SearchInputProps) {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    router.push(`/searchresult?keyword=${keyword}&sort=ascending`);
+    router.push(`/searchresult?keyword=${keyword}&type=all&sort=id-asc`);
+
+    formRef.current && formRef.current.reset();
   };
 
   return (
     <form
+      ref={formRef}
       onSubmit={handleSubmit}
       className={twMerge(
         `relative flex items-center w-max border-blue-50 bg-white-10 rounded-full shadow-outer/down ${SEARCH_INPUT_SIZE[type].form}`,
@@ -55,7 +59,7 @@ const SEARCH_INPUT_SIZE = {
   },
   header: {
     form: 'w-[12.5rem] h-8 border-[.1875rem]',
-    search: 'w-[10.625rem] ml-2 text-[.75rem]',
+    search: 'w-[10.25rem] ml-2 text-[.75rem]',
     submit: 'top-[.3125rem] right-[.3125rem] w-4 h-4 bg-cover',
   },
 } as const;
