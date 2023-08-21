@@ -17,7 +17,11 @@ export default function PokemonCards({
       }>
       <h2 className="sr-only">검색 결과</h2>
       {pokemonCardsInfo.map((pokemonCardInfo) => (
-        <PokemonCard pokemonCardInfo={pokemonCardInfo} lang={lang} />
+        <PokemonCard
+          key={pokemonCardInfo.id}
+          pokemonCardInfo={pokemonCardInfo}
+          lang={lang}
+        />
       ))}
     </section>
   );
