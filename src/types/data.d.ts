@@ -6,7 +6,7 @@ export interface RawPokemonCardInfo {
   types: {
     type: { name: string };
   }[];
-  specy: { krName: { name: string }[] };
+  specy: { koName: { name: string }[] };
 }
 
 export type RawPokemonCardsInfo = RawPokemonCardInfo[];
@@ -18,7 +18,7 @@ export interface RawPokemonDetailInfo {
     height: number;
     weight: number;
     types: { type: { name: string } }[];
-    specy: { krName: { name: string }[] };
+    specy: { koName: { name: string }[] };
   }[];
   feature: { contents: string }[];
   description: { contents: string }[] | [];
@@ -27,7 +27,7 @@ export interface RawPokemonDetailInfo {
     info: {
       enName: string;
       description: { contents: string }[] | [];
-      krName: { name: string }[] | [];
+      koName: { name: string }[] | [];
     };
   }[];
   stats: { value: number }[];
@@ -35,7 +35,7 @@ export interface RawPokemonDetailInfo {
     specy: {
       id: number;
       enName: string;
-      krName: { name: string }[];
+      koName: { name: string }[];
       pokemonInfo: { types: { type: { name: string } }[] }[];
     }[];
   }[];

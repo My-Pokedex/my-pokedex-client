@@ -2,7 +2,7 @@ export interface DefaultProps {
   className?: string;
 }
 
-export type Lang = 'kr' | 'en';
+export type Lang = 'ko' | 'en';
 
 export type PokemonType =
   | 'normal'

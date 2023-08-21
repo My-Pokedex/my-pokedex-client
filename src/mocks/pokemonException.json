@@ -19,7 +19,7 @@
           }
         ],
         "specy": {
-          "krName": [
+          "koName": [
             {
               "name": "드니차"
             }
@@ -42,7 +42,7 @@
         "info": {
           "enName": "thermal-exchange",
           "description": [],
-          "krName": []
+          "koName": []
         }
       },
       {
@@ -57,7 +57,7 @@
               "contents": "The Pokémon gradually regains HP in a hailstorm."
             }
           ],
-          "krName": [
+          "koName": [
             {
               "name": "아이스바디"
             }
@@ -107,7 +107,7 @@
                 ]
               }
             ],
-            "krName": [
+            "koName": [
               {
                 "name": "드니차"
               }
@@ -132,7 +132,7 @@
                 ]
               }
             ],
-            "krName": [
+            "koName": [
               {
                 "name": "드니꽁"
               }
@@ -157,7 +157,7 @@
                 ]
               }
             ],
-            "krName": [
+            "koName": [
               {
                 "name": "드닐레이브"
               }
