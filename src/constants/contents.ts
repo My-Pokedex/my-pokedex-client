@@ -40,17 +40,33 @@ export const TYPE_TAG_CONTENTS = {
 } as const;
 
 export const COMMON_BUTTON_CONTENTS = {
-  area: '출현 장소',
-  viewAll: '전체 보기',
-  move: '배우는 기술',
-  viewCompatibility: '전체 상성표 보기',
-  newCombination: '새로운 조합 만들기',
-  share: '카카오톡 공유하기',
+  kr: {
+    area: '출현 장소',
+    viewAll: '전체 보기',
+    move: '배우는 기술',
+    viewCompatibility: '전체 상성표 보기',
+    newCombination: '새로운 조합 만들기',
+    share: '카카오톡 공유하기',
+  },
+  en: {
+    area: 'Appearance Area',
+    viewAll: 'View All',
+    move: 'Moves',
+    viewCompatibility: 'View All Compatibility',
+    newCombination: 'Create Combination',
+    share: 'Share on KakaoTalk',
+  },
 } as const;
 
 export const TYPE_FILTERS_TITLES = {
-  search: '타입별 보기',
-  compatibility: '타입별 상성 보기',
+  kr: {
+    search: '타입별 보기',
+    compatibility: '타입별 상성 보기',
+  },
+  en: {
+    search: 'View by Type',
+    compatibility: 'View Effect by Type',
+  },
 } as const;
 
 export const OPTION_CONTENTS = [
