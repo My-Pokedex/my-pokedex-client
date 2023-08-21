@@ -13,7 +13,13 @@ export default function BasicInfo({ id, name, types, lang }: BasicInfoProps) {
       <section className="container-type">
         <h3 className="sr-only">타입</h3>
         {types.map((type) => (
-          <TypeTag usage="info" type={type} size="large" lang={lang} />
+          <TypeTag
+            key={type}
+            usage="info"
+            type={type}
+            size="large"
+            lang={lang}
+          />
         ))}
       </section>
     </div>

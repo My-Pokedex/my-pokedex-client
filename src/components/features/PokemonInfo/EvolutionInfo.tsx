@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { PokemonTitle, PokemonImage, TypeTag } from '@/components';
@@ -17,7 +18,7 @@ export default function EvolutionInfo({
       <h3 className="info-title">진화 정보</h3>
       <div className="flex flex-wrap justify-center items-center gap-7 max-1evol:w-[5.75rem]">
         {evolutionChain.map(({ id, name, types }, index) => (
-          <>
+          <Fragment key={id}>
             <Link
               href={`/pokemon/${id}`}
               className="flex flex-col items-center gap-2">
@@ -27,7 +28,13 @@ export default function EvolutionInfo({
               </div>
               <div className="container-type gap-1">
                 {types.map((type) => (
-                  <TypeTag usage="info" type={type} size="small" lang={lang} />
+                  <TypeTag
+                    key={type}
+                    usage="info"
+                    type={type}
+                    size="small"
+                    lang={lang}
+                  />
                 ))}
               </div>
             </Link>
@@ -41,7 +48,7 @@ export default function EvolutionInfo({
                 style={EVOLUTION_SIZE}
               />
             )}
-          </>
+          </Fragment>
         ))}
       </div>
     </section>
