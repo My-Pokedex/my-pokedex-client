@@ -1,5 +1,6 @@
 import { TypeTag } from '@/components';
-import { BATTLE_INFO_TITLES, BATTLE_INFO_CONTENTS } from '@/constants/contents';
+import { BATTLE_INFO_TITLES } from '@/constants/contents';
+import { BATTLE_INFO_VALUES } from '@/constants/values';
 import { DefaultProps, Lang, PokemonType } from '@/types/common';
 
 type InfoUsage = 'attack' | 'defense';
@@ -11,7 +12,7 @@ interface BattleInfoProps extends DefaultProps {
 }
 
 export default function BattleInfo({ usage, type, lang }: BattleInfoProps) {
-  const battleInfo = Object.entries(BATTLE_INFO_CONTENTS[type][usage]).sort(
+  const battleInfo = Object.entries(BATTLE_INFO_VALUES[type][usage]).sort(
     (a, b) => +b[0] - +a[0],
   );
 
@@ -28,7 +29,7 @@ export default function BattleInfo({ usage, type, lang }: BattleInfoProps) {
             key={effect}
             className="flex grow justify-center items-center gap-4 ">
             <h4 className="text-xl text-gray-70 font-bold whitespace-nowrap">
-              {`${effect}${lang === 'kr' ? '배' : 'x'} :`}
+              {`${effect}${lang === 'ko' ? '배' : 'x'} :`}
             </h4>
             <div className="container-type flex-wrap">
               {types.map((type) => (
