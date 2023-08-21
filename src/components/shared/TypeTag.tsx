@@ -27,7 +27,7 @@ export default function TypeTag({
       {usage === 'button' && (
         <button
           type="button"
-          data-tag-name={type}
+          data-type={type}
           className={`hover:scale-110 transition-all ease-out ${tagStyle}`}>
           {tagName}
         </button>
