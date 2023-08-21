@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { useSearchParams } from 'next/navigation';
-import { GET_POKEMONS } from '@/api/gql';
+import { GET_LIST } from '@/api/gql';
 import { CARDS_LIMIT } from '@/constants/values';
 
 function useSearch() {
@@ -19,7 +19,7 @@ function useSearch() {
     lang: 'ko',
   };
 
-  const { loading, error, data, refetch } = useQuery(GET_POKEMONS, {
+  const { loading, error, data, refetch } = useQuery(GET_LIST, {
     variables,
   });
 
