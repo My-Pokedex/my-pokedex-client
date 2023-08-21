@@ -24,13 +24,21 @@ export default function BattleInfo({ usage, type, lang }: BattleInfoProps) {
         const [effect, types] = info as [string, PokemonType[]];
 
         return (
-          <section className="flex grow justify-center items-center gap-4 ">
+          <section
+            key={effect}
+            className="flex grow justify-center items-center gap-4 ">
             <h4 className="text-xl text-gray-70 font-bold whitespace-nowrap">
               {`${effect}${lang === 'kr' ? '배' : 'x'} :`}
             </h4>
             <div className="container-type flex-wrap">
               {types.map((type) => (
-                <TypeTag usage="info" type={type} size="large" lang={lang} />
+                <TypeTag
+                  key={type}
+                  usage="info"
+                  type={type}
+                  size="large"
+                  lang={lang}
+                />
               ))}
             </div>
           </section>
