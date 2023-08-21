@@ -27,7 +27,13 @@ export default function PokemonCard({
         />
         <div className="container-type">
           {types.map((type) => (
-            <TypeTag usage="info" type={type} size="large" lang={lang} />
+            <TypeTag
+              key={type}
+              usage="info"
+              type={type}
+              size="large"
+              lang={lang}
+            />
           ))}
         </div>
         <CatchButton
