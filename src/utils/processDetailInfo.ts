@@ -12,7 +12,7 @@ export const processDetailInfo = (info: RawPokemonDetailInfo, lang: Lang) => {
     height,
     weight,
     types,
-    specy: { krName },
+    specy: { koName },
   } = basicInfo[0];
   const { specy } = evolutionChain[0];
 
@@ -28,10 +28,10 @@ export const processDetailInfo = (info: RawPokemonDetailInfo, lang: Lang) => {
     ? abilities.map((abilitiy) => {
         const {
           isHidden,
-          info: { enName, description, krName },
+          info: { enName, description, koName },
         } = abilitiy;
 
-        const name = convertName(enName, krName, lang);
+        const name = convertName(enName, koName, lang);
         const newDescription = convertContents(description, lang);
 
         return { isHidden, name, description: newDescription };
@@ -48,9 +48,9 @@ export const processDetailInfo = (info: RawPokemonDetailInfo, lang: Lang) => {
       ? specy
           .sort((a, b) => a.id - b.id)
           .map((info) => {
-            const { id, enName, krName, pokemonInfo } = info;
+            const { id, enName, koName, pokemonInfo } = info;
 
-            const name = convertName(enName, krName, lang);
+            const name = convertName(enName, koName, lang);
             const newTypes = pokemonInfo[0].types.map(
               (type) => type.type.name,
             ) as PokemonType[];
@@ -61,7 +61,7 @@ export const processDetailInfo = (info: RawPokemonDetailInfo, lang: Lang) => {
 
   return {
     id,
-    name: convertName(enName, krName, lang),
+    name: convertName(enName, koName, lang),
     types: types.map(({ type }) => type.name) as PokemonType[],
     feature: newFeature,
     description: newDescription,
