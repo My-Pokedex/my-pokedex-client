@@ -15,27 +15,31 @@ interface TypeFiltersProps extends DefaultProps {
 export default function TypeFilters({ usage, lang }: TypeFiltersProps) {
   const router = useRouter();
 
-  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleFilterClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!(e.target instanceof HTMLButtonElement)) return;
 
-    if (e.target instanceof HTMLElement && e.target.dataset.tagName) {
-      const newTypeQuery = e.target.dataset.tagName;
-
-      const searchParams = new URLSearchParams(window.location.search);
-      searchParams.set('type', newTypeQuery);
+    if (e.target instanceof HTMLElement && e.target.dataset.type) {
+      const newTypeQuery = e.target.dataset.type;
 
       usage === 'search' &&
-        router.push(`/searchresult?${searchParams.toString()}`);
+        router.push(`/searchresult?keyword=&type=${newTypeQuery}&sort=id-asc`);
       usage === 'compatibility' &&
-        router.push(`/compatibility?${searchParams.toString()}`);
+        router.push(`/compatibility?type=${newTypeQuery}`);
     }
+  };
+
+  const handleCommonButtonClick = () => {
+    const searchParams = new URLSearchParams(window.location.search);
+    searchParams.set('type', 'all');
+
+    router.push(`/searchresult?${searchParams.toString()}`);
   };
 
   const tagNames = Object.keys(TYPE_TAG_CONTENTS) as PokemonType[];
 
   return (
     <div
-      onClick={handleClick}
+      onClick={handleFilterClick}
       className="flex flex-col items-center max-w-[50.5rem] min-w-[15.75rem] px-4 pt-6 pb-5 border-4 rounded-2xl bg-white-10 shadow-outer/down">
       <h3 className="mb-6 text-2xl font-bold">
         {TYPE_FILTERS_TITLES[lang][usage]}
@@ -48,7 +52,13 @@ export default function TypeFilters({ usage, lang }: TypeFiltersProps) {
         ))}
       </ul>
       {usage === 'search' && (
-        <CommonButton type="viewAll" lang={lang} data-tag-name="all" />
+        <CommonButton
+          type="viewAll"
+          lang={lang}
+          data-type="all"
+          onClick={handleCommonButtonClick}
+          className="mt-2"
+        />
       )}
     </div>
   );
