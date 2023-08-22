@@ -6,13 +6,18 @@ import { Header } from '@/components';
 
 export default function SearchResultLayout({
   children,
+  cards,
 }: {
   children: React.ReactNode;
+  cards: React.ReactNode;
 }) {
   return (
     <ApolloProvider client={client}>
       <Header />
-      <div className="container-page">{children}</div>
+      <div className="container-page">
+        {children}
+        {cards}
+      </div>
     </ApolloProvider>
   );
 }

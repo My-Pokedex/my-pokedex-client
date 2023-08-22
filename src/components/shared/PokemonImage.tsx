@@ -26,7 +26,7 @@ export default function PokemonImage({
       alt={`${name}의 모습`}
       width={imgSize}
       height={imgSize}
-      loading="lazy"
+      priority={true}
       style={{ width: imgSize, height: imgSize, objectFit: 'contain' }}
       {...props}
     />

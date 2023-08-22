@@ -2,6 +2,7 @@ import Header from './Header/Header';
 import CatchButton from './CatchButton';
 import CommonButton from './CommonButton';
 import InfoTag from './InfoTag';
+import Loading from './Loading';
 import Logo from './Logo';
 import Pokedex from './Pokedex';
 import PokemonImage from './PokemonImage';
@@ -15,6 +16,7 @@ export {
   CatchButton,
   CommonButton,
   InfoTag,
+  Loading,
   Logo,
   Pokedex,
   PokemonImage,
