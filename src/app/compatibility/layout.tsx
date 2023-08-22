@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Header } from '@/components';
+import { BackButton, Header } from '@/components';
 
 export const metadata: Metadata = {
   title: 'My Pokedex - 타입별 상성 보기',
@@ -20,6 +20,7 @@ export default function CompatibilityLayout({
         {children}
         {info}
       </div>
+      <BackButton />
     </>
   );
 }
