@@ -1,4 +1,4 @@
-import { TypeFilters, Dropdown, PokemonCards } from '@/components';
+import { TypeFilters, Dropdown } from '@/components';
 
 export default function SearchResult() {
   return (
