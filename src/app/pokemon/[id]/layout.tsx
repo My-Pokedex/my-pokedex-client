@@ -2,7 +2,7 @@
 
 import { ApolloProvider } from '@apollo/client';
 import client from '@/api/client';
-import { Header } from '@/components';
+import { BackButton, Header } from '@/components';
 
 export default function PokemonLayout({
   children,
@@ -13,6 +13,7 @@ export default function PokemonLayout({
     <ApolloProvider client={client}>
       <Header />
       <div className="container-page">{children}</div>
+      <BackButton />
     </ApolloProvider>
   );
 }

@@ -2,7 +2,7 @@
 
 import { ApolloProvider } from '@apollo/client';
 import client from '@/api/client';
-import { Header } from '@/components';
+import { BackButton, Header } from '@/components';
 
 export default function SearchResultLayout({
   children,
@@ -18,6 +18,7 @@ export default function SearchResultLayout({
         {children}
         {cards}
       </div>
+      <BackButton />
     </ApolloProvider>
   );
 }
