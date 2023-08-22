@@ -1,6 +1,6 @@
 'use client';
 
-import { useParams } from 'next/navigation';
+import { useParams, notFound } from 'next/navigation';
 import { useQuery } from '@apollo/client';
 import { GET_DETAIL } from '@/api/gql';
 import { PokemonInfo, CatchButton, Loading } from '@/components';
@@ -14,7 +14,8 @@ export default function Pokemon() {
   });
 
   if (loading) return <Loading className="mt-20" />;
-  if (error) return `Error : ${error}`;
+  if (error) return notFound();
+  if (!data.basicInfo.length) return notFound();
 
   const processed = processDetailInfo(data, 'ko');
 
