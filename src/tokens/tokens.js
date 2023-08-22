@@ -63,6 +63,7 @@ const tokens = {
       speed: '#ee759a',
       total: '#a77cef',
     },
+    transparent: 'rgba(0, 0, 0, 0)',
   },
   fontSize: {
     base: '1rem',
