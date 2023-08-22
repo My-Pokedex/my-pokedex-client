@@ -1,5 +1,6 @@
 'use client';
 
+import { notFound } from 'next/navigation';
 import { Loading, NoResults } from '@/components';
 import PokemonCard from './PokemonCard';
 import { DefaultProps, Lang } from '@/types/common';
@@ -14,7 +15,7 @@ export default function PokemonCards({ lang }: PokemonCardsProps) {
   const { loading, error, pokemonCardsInfo } = useSearch();
 
   if (loading) return <Loading className="mb-9" />;
-  if (error) return `Error : ${error}`;
+  if (error) return notFound();
   if (!pokemonCardsInfo.length) return <NoResults />;
 
   const processed = processCardsInfo(pokemonCardsInfo, lang);
