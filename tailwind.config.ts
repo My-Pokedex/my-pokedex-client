@@ -19,8 +19,8 @@ const config: Config = {
     },
     screens: {
       '1evol': '410px',
-      '1cards': '585px',
-      '2cards': '850px',
+      '2cards': '585px',
+      '3cards': '850px',
     },
   },
   plugins: [],

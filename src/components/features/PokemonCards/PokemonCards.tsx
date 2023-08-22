@@ -1,5 +1,6 @@
 'use client';
 
+import { Loading } from '@/components';
 import PokemonCard from './PokemonCard';
 import { DefaultProps, Lang } from '@/types/common';
 import useSearch from '@/hooks/useSearch';
@@ -12,7 +13,7 @@ interface PokemonCardsProps extends DefaultProps {
 export default function PokemonCards({ lang }: PokemonCardsProps) {
   const { loading, error, pokemonCardsInfo } = useSearch();
 
-  if (loading) return null;
+  if (loading) return <Loading className="mb-9" />;
   if (error) return `Error : ${error}`;
 
   const processed = processCardsInfo(pokemonCardsInfo, lang);
@@ -20,7 +21,7 @@ export default function PokemonCards({ lang }: PokemonCardsProps) {
   return (
     <section
       className={
-        'grid grid-cols-3 gap-4 max-2cards:grid-cols-2 max-1cards:grid-cols-1 mb-[5rem]'
+        'grid grid-cols-3 gap-4 max-3cards:grid-cols-2 max-2cards:grid-cols-1 mb-[5rem]'
       }>
       <h2 className="sr-only">검색 결과</h2>
       {processed.map((pokemonCardInfo) => (

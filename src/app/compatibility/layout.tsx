@@ -8,13 +8,18 @@ export const metadata: Metadata = {
 
 export default function CompatibilityLayout({
   children,
+  info,
 }: {
   children: React.ReactNode;
+  info: React.ReactNode;
 }) {
   return (
     <>
       <Header />
-      <div className="container-page">{children}</div>
+      <div className="container-page flex flex-col items-center">
+        {children}
+        {info}
+      </div>
     </>
   );
 }

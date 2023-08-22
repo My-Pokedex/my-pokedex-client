@@ -3,7 +3,7 @@
 import { useParams } from 'next/navigation';
 import { useQuery } from '@apollo/client';
 import { GET_DETAIL } from '@/api/gql';
-import { PokemonInfo, CatchButton } from '@/components';
+import { PokemonInfo, CatchButton, Loading } from '@/components';
 import { processDetailInfo } from '@/utils/processDetailInfo';
 
 export default function Pokemon() {
@@ -13,7 +13,7 @@ export default function Pokemon() {
     variables: { id: params.id },
   });
 
-  if (loading) return null;
+  if (loading) return <Loading className="mt-20" />;
   if (error) return `Error : ${error}`;
 
   const processed = processDetailInfo(data, 'ko');
