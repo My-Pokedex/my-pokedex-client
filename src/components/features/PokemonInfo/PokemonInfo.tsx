@@ -30,7 +30,7 @@ export default function PokemonInfo({
   } = pokemonDetailInfo;
 
   return (
-    <div className="flex flex-col gap-12 p-10 max-w-[50.5rem] mb-[3.75rem] border-4 rounded-2xl bg-white-10 shadow-outer/down 2cards:min-w-[50.5rem]">
+    <div className="flex flex-col gap-12 p-10 max-w-[50.5rem] mb-[3.75rem] border-4 rounded-2xl bg-white-10 shadow-outer/down 3cards:min-w-[50.5rem]">
       <BasicInfo id={id} name={name} types={types} lang={lang} />
       {feature && <FeatureInfo feature={feature} description={description} />}
       <HWInfo height={height} weight={weight} />
