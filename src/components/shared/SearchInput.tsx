@@ -39,13 +39,13 @@ export default function SearchInput({ type, className }: SearchInputProps) {
         type="search"
         placeholder="포켓몬 이름을 입력하세요."
         onChange={handleChange}
-        className={`placeholder-gray-30 ${SEARCH_INPUT_SIZE[type].search}`}
+        className={`placeholder-gray-30 bg-transparent ${SEARCH_INPUT_SIZE[type].search}`}
       />
       <input
         type="submit"
         title="검색하기"
         value=""
-        className={`absolute bg-[url('/assets/img/search.svg')] cursor-pointer ${SEARCH_INPUT_SIZE[type].submit}`}
+        className={`absolute bg-cover bg-[url('/assets/img/search.svg')] cursor-pointer ${SEARCH_INPUT_SIZE[type].submit}`}
       />
     </form>
   );
@@ -53,13 +53,14 @@ export default function SearchInput({ type, className }: SearchInputProps) {
 
 const SEARCH_INPUT_SIZE = {
   main: {
-    form: 'w-[30.625rem] h-[4.125rem] border-[.3125rem]',
-    search: 'w-[25.25rem] ml-[1.25rem] text-xl',
-    submit: 'top-[.625rem] right-[.625rem] w-[2.25rem] h-[2.25rem]',
+    form: 'w-[26.25rem] h-[3.75rem] border-[.3125rem] max-2cards:w-[20rem]',
+    search:
+      'w-[21.25rem] ml-[1.125rem] text-lg max-2cards:w-[15rem] max-2cards:text-[1.125rem]',
+    submit: 'top-[.625rem] right-[.625rem] w-8 h-8',
   },
   header: {
     form: 'w-[12.5rem] h-8 border-[.1875rem]',
     search: 'w-[10.25rem] ml-2 text-[.75rem]',
-    submit: 'top-[.3125rem] right-[.3125rem] w-4 h-4 bg-cover',
+    submit: 'top-[.3125rem] right-[.3125rem] w-4 h-4',
   },
 } as const;
