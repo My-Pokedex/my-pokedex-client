@@ -15,6 +15,7 @@ export default function SearchResultLayout({
     <ApolloProvider client={client}>
       <Header />
       <div className="container-page">
+        <h1 className="sr-only">My Pokedex</h1>
         {children}
         {cards}
       </div>

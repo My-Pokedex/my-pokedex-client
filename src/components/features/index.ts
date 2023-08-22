@@ -4,6 +4,7 @@ import PokemonInfo from './PokemonInfo/PokemonInfo';
 import AuthButton from './AuthButton';
 import BattleInfo from './BattleInfo';
 import Dropdown from './Dropdown';
+import NoResults from './NoResults';
 import SelectedType from './SelectedType';
 
 export {
@@ -13,5 +14,6 @@ export {
   AuthButton,
   BattleInfo,
   Dropdown,
+  NoResults,
   SelectedType,
 };
