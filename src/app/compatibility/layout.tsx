@@ -16,6 +16,7 @@ export default function CompatibilityLayout({
   return (
     <>
       <Header />
+      <h1 className="sr-only">My Pokedex</h1>
       <div className="container-page flex flex-col items-center">
         {children}
         {info}

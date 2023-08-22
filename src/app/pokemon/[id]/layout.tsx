@@ -12,6 +12,7 @@ export default function PokemonLayout({
   return (
     <ApolloProvider client={client}>
       <Header />
+      <h1 className="sr-only">My Pokedex</h1>
       <div className="container-page">{children}</div>
     </ApolloProvider>
   );
