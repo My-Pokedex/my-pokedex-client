@@ -1,8 +1,13 @@
+'use client';
+
+import { usePageStore } from '@/stores';
 import { twMerge } from 'tailwind-merge';
 import NavLink from './NavLink';
 import { DefaultProps } from '@/types/common';
 
 export default function NavBar({ className }: DefaultProps) {
+  const { resetPage } = usePageStore();
+
   return (
     <nav
       className={twMerge(
@@ -14,7 +19,7 @@ export default function NavBar({ className }: DefaultProps) {
           <NavLink destination="signin" />
         </li>
         <li>
-          <NavLink destination="searchResult" />
+          <NavLink destination="searchResult" onClick={resetPage} />
         </li>
         <li>
           <NavLink destination="compatibility" />
