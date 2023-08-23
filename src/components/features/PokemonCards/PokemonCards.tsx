@@ -12,7 +12,8 @@ interface PokemonCardsProps extends DefaultProps {
 }
 
 export default function PokemonCards({ lang }: PokemonCardsProps) {
-  const { loading, error, observerTarget, pokemonCardsInfo } = useSearch();
+  const { loading, error, isLastPage, observerTarget, pokemonCardsInfo } =
+    useSearch();
 
   if (loading && !pokemonCardsInfo) return <Loading className="mb-9" />;
   if (error) return notFound();
@@ -24,7 +25,7 @@ export default function PokemonCards({ lang }: PokemonCardsProps) {
     <>
       <div
         className={
-          'grid grid-cols-3 gap-4 max-3cards:grid-cols-2 max-2cards:grid-cols-1 mb-6]'
+          'grid grid-cols-3 gap-4 max-3cards:grid-cols-2 max-2cards:grid-cols-1 mb-12'
         }>
         <h2 className="sr-only">검색 결과</h2>
         {processed.map((pokemonCardInfo) => (
@@ -38,7 +39,7 @@ export default function PokemonCards({ lang }: PokemonCardsProps) {
       {loading ? (
         <div className="w-full h-12 my-8 bg-no-repeat bg-contain bg-center bg-[url('/assets/img/loading.gif')]" />
       ) : (
-        <div ref={observerTarget} className="w-full h-12 my-8" />
+        !isLastPage && <div ref={observerTarget} className="w-full h-12 my-8" />
       )}
     </>
   );
