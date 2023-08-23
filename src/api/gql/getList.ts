@@ -7,6 +7,7 @@ const GET_LIST = gql`
     $type: String!
     $sort: [pokemon_v2_pokemon_order_by!]
     $lang: String!
+    $offset: Int!
   ) {
     pokemonCardsInfo: pokemon_v2_pokemon(
       where: {
@@ -29,6 +30,7 @@ const GET_LIST = gql`
       }
       limit: $limit
       order_by: $sort
+      offset: $offset
     ) {
       enName: name
       id: pokemon_species_id
