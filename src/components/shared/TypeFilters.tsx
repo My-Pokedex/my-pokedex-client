@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { usePageStore } from '@/stores';
 import { TypeTag, CommonButton } from '@/components';
 import { DefaultProps, Lang, PokemonType } from '@/types/common';
 import { TYPE_TAG_CONTENTS, TYPE_FILTERS_TITLES } from '@/constants/contents';
@@ -14,6 +15,7 @@ interface TypeFiltersProps extends DefaultProps {
 
 export default function TypeFilters({ usage, lang }: TypeFiltersProps) {
   const router = useRouter();
+  const { resetPage } = usePageStore();
 
   const handleFilterClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!(e.target instanceof HTMLButtonElement)) return;
@@ -21,8 +23,12 @@ export default function TypeFilters({ usage, lang }: TypeFiltersProps) {
     if (e.target instanceof HTMLElement && e.target.dataset.type) {
       const newTypeQuery = e.target.dataset.type;
 
-      usage === 'search' &&
+      if (usage === 'search') {
+        resetPage();
+
         router.push(`/searchresult?keyword=&type=${newTypeQuery}&sort=id-asc`);
+      }
+
       usage === 'compatibility' &&
         router.push(`/compatibility?type=${newTypeQuery}`);
     }

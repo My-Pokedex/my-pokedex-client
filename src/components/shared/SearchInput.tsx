@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
+import { usePageStore } from '@/stores';
 import { twMerge } from 'tailwind-merge';
 import { DefaultProps } from '@/types/common';
 
@@ -13,6 +14,7 @@ interface SearchInputProps extends DefaultProps {
 
 export default function SearchInput({ type, className }: SearchInputProps) {
   const router = useRouter();
+  const { resetPage } = usePageStore();
   const [keyword, setKeyword] = useState('');
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -22,6 +24,7 @@ export default function SearchInput({ type, className }: SearchInputProps) {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    resetPage();
     router.push(`/searchresult?keyword=${keyword}&type=all&sort=id-asc`);
 
     formRef.current && formRef.current.reset();
