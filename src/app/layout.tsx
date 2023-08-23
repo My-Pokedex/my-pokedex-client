@@ -30,6 +30,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={`h-full ${galmuri.className}`}>
+      <head>
+        <link rel="icon" href="/assets/icon/favicon.png" />
+      </head>
       <body className="h-full bg-[#7FAD71]">
         <h1 className="sr-only">My Pokedex</h1>
         {children}
