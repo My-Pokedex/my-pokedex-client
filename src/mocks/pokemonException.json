@@ -1,0 +1,170 @@
+{
+  "data": {
+    "basicInfo": [
+      {
+        "enName": "frigibax",
+        "id": 996,
+        "height": 5,
+        "weight": 170,
+        "types": [
+          {
+            "type": {
+              "name": "dragon"
+            }
+          },
+          {
+            "type": {
+              "name": "ice"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "드니차"
+            }
+          ]
+        }
+      }
+    ],
+    "feature": [
+      {
+        "contents": ""
+      },
+      {
+        "contents": ""
+      }
+    ],
+    "description": [],
+    "abilities": [
+      {
+        "isHidden": false,
+        "info": {
+          "enName": "thermal-exchange",
+          "description": [],
+          "koName": []
+        }
+      },
+      {
+        "isHidden": true,
+        "info": {
+          "enName": "ice-body",
+          "description": [
+            {
+              "contents": "날씨가 싸라기눈일 때 HP를\n조금씩 회복한다."
+            },
+            {
+              "contents": "The Pokémon gradually regains HP in a hailstorm."
+            }
+          ],
+          "koName": [
+            {
+              "name": "아이스바디"
+            }
+          ]
+        }
+      }
+    ],
+    "stats": [
+      {
+        "value": 65
+      },
+      {
+        "value": 75
+      },
+      {
+        "value": 45
+      },
+      {
+        "value": 35
+      },
+      {
+        "value": 45
+      },
+      {
+        "value": 55
+      }
+    ],
+    "evolutionChain": [
+      {
+        "specy": [
+          {
+            "id": 996,
+            "enName": "frigibax",
+            "pokemonInfo": [
+              {
+                "types": [
+                  {
+                    "type": {
+                      "name": "dragon"
+                    }
+                  },
+                  {
+                    "type": {
+                      "name": "ice"
+                    }
+                  }
+                ]
+              }
+            ],
+            "koName": [
+              {
+                "name": "드니차"
+              }
+            ]
+          },
+          {
+            "id": 997,
+            "enName": "arctibax",
+            "pokemonInfo": [
+              {
+                "types": [
+                  {
+                    "type": {
+                      "name": "dragon"
+                    }
+                  },
+                  {
+                    "type": {
+                      "name": "ice"
+                    }
+                  }
+                ]
+              }
+            ],
+            "koName": [
+              {
+                "name": "드니꽁"
+              }
+            ]
+          },
+          {
+            "id": 998,
+            "enName": "baxcalibur",
+            "pokemonInfo": [
+              {
+                "types": [
+                  {
+                    "type": {
+                      "name": "dragon"
+                    }
+                  },
+                  {
+                    "type": {
+                      "name": "ice"
+                    }
+                  }
+                ]
+              }
+            ],
+            "koName": [
+              {
+                "name": "드닐레이브"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

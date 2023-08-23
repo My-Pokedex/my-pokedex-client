@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .info-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .info-desc {
+    color: #4d5154;
+  }
+
+  .container-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding-top: 3.5rem;
+    background: center / cover no-repeat url('/assets/img/bg_default.png');
+  }
+
+  .container-type {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .container-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bounce {
+    animation: bounce 1.5s ease-in-out infinite;
+  }
+
+  .bounce-back {
+    animation: bounce-back 1.5s ease-in-out infinite;
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3%);
+    }
+  }
+
+  @keyframes bounce-back {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15%);
+    }
+  }
+}
+
+html {
+  line-height: 1;
+}

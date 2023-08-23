@@ -1,4 +1,7 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
+import tokens from './src/tokens/tokens';
+
+const { colors, fontSize, boxShadow, borderRadius, backgroundImage } = tokens;
 
 const config: Config = {
   content: [
@@ -7,14 +10,20 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors,
+    fontSize,
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+      boxShadow,
+      borderRadius,
+      backgroundImage,
+    },
+    screens: {
+      '1evol': '410px',
+      '2cards': '585px',
+      '3cards': '850px',
     },
   },
   plugins: [],
-}
-export default config
+};
+
+export default config;

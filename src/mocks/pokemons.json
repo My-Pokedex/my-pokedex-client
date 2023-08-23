@@ -1,0 +1,385 @@
+{
+  "data": {
+    "pokemonCardsInfo": [
+      {
+        "enName": "bulbasaur",
+        "id": 1,
+        "types": [
+          {
+            "type": {
+              "name": "grass"
+            }
+          },
+          {
+            "type": {
+              "name": "poison"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "이상해씨"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "ivysaur",
+        "id": 2,
+        "types": [
+          {
+            "type": {
+              "name": "grass"
+            }
+          },
+          {
+            "type": {
+              "name": "poison"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "이상해풀"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "venusaur",
+        "id": 3,
+        "types": [
+          {
+            "type": {
+              "name": "grass"
+            }
+          },
+          {
+            "type": {
+              "name": "poison"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "이상해꽃"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "charmander",
+        "id": 4,
+        "types": [
+          {
+            "type": {
+              "name": "fire"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "파이리"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "charmeleon",
+        "id": 5,
+        "types": [
+          {
+            "type": {
+              "name": "fire"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "리자드"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "charizard",
+        "id": 6,
+        "types": [
+          {
+            "type": {
+              "name": "fire"
+            }
+          },
+          {
+            "type": {
+              "name": "flying"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "리자몽"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "squirtle",
+        "id": 7,
+        "types": [
+          {
+            "type": {
+              "name": "water"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "꼬부기"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "wartortle",
+        "id": 8,
+        "types": [
+          {
+            "type": {
+              "name": "water"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "어니부기"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "blastoise",
+        "id": 9,
+        "types": [
+          {
+            "type": {
+              "name": "water"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "거북왕"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "caterpie",
+        "id": 10,
+        "types": [
+          {
+            "type": {
+              "name": "bug"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "캐터피"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "metapod",
+        "id": 11,
+        "types": [
+          {
+            "type": {
+              "name": "bug"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "단데기"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "butterfree",
+        "id": 12,
+        "types": [
+          {
+            "type": {
+              "name": "bug"
+            }
+          },
+          {
+            "type": {
+              "name": "flying"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "버터플"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "weedle",
+        "id": 13,
+        "types": [
+          {
+            "type": {
+              "name": "bug"
+            }
+          },
+          {
+            "type": {
+              "name": "poison"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "뿔충이"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "kakuna",
+        "id": 14,
+        "types": [
+          {
+            "type": {
+              "name": "bug"
+            }
+          },
+          {
+            "type": {
+              "name": "poison"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "딱충이"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "beedrill",
+        "id": 15,
+        "types": [
+          {
+            "type": {
+              "name": "bug"
+            }
+          },
+          {
+            "type": {
+              "name": "poison"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "독침붕"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "pidgey",
+        "id": 16,
+        "types": [
+          {
+            "type": {
+              "name": "normal"
+            }
+          },
+          {
+            "type": {
+              "name": "flying"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "구구"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "pidgeotto",
+        "id": 17,
+        "types": [
+          {
+            "type": {
+              "name": "normal"
+            }
+          },
+          {
+            "type": {
+              "name": "flying"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "피죤"
+            }
+          ]
+        }
+      },
+      {
+        "enName": "pidgeot",
+        "id": 18,
+        "types": [
+          {
+            "type": {
+              "name": "normal"
+            }
+          },
+          {
+            "type": {
+              "name": "flying"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "피죤투"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "data": {
+    "basicInfo": [
+      {
+        "enName": "venusaur",
+        "id": 3,
+        "height": 20,
+        "weight": 1000,
+        "types": [
+          {
+            "type": {
+              "name": "grass"
+            }
+          },
+          {
+            "type": {
+              "name": "poison"
+            }
+          }
+        ],
+        "specy": {
+          "koName": [
+            {
+              "name": "이상해꽃"
+            }
+          ]
+        }
+      }
+    ],
+    "feature": [
+      {
+        "contents": "씨앗포켓몬"
+      },
+      {
+        "contents": "Seed Pokémon"
+      }
+    ],
+    "description": [
+      {
+        "contents": "큰 꽃잎을 펼쳐\n햇빛을 받고 있으면\n몸에 힘이 넘쳐흐른다."
+      },
+      {
+        "contents": "By spreading the broad petals of its flower\nand catching the sun’s rays, it fills its body\nwith power."
+      },
+      {
+        "contents": "태양에너지를 양분으로\n큰 꽃을 피운다. 양지를 향해\n이끌려가듯이 이동한다."
+      },
+      {
+        "contents": "Its plant blooms when it is absorbing solar\nenergy. It stays on the move to seek sunlight."
+      }
+    ],
+    "abilities": [
+      {
+        "isHidden": false,
+        "info": {
+          "enName": "overgrow",
+          "description": [
+            {
+              "contents": "HP가 줄었을 때\n풀타입 기술의\n위력이 올라간다."
+            },
+            {
+              "contents": "Powers up Grass-type moves when the Pokémon’s\nHP is low."
+            }
+          ],
+          "koName": [
+            {
+              "name": "심록"
+            }
+          ]
+        }
+      },
+      {
+        "isHidden": true,
+        "info": {
+          "enName": "chlorophyll",
+          "description": [
+            {
+              "contents": "날씨가 맑을 때\n스피드가 올라간다."
+            },
+            {
+              "contents": "Boosts the Pokémon’s Speed stat in harsh sunlight."
+            }
+          ],
+          "koName": [
+            {
+              "name": "엽록소"
+            }
+          ]
+        }
+      }
+    ],
+    "stats": [
+      {
+        "value": 80
+      },
+      {
+        "value": 82
+      },
+      {
+        "value": 83
+      },
+      {
+        "value": 100
+      },
+      {
+        "value": 100
+      },
+      {
+        "value": 80
+      }
+    ],
+    "evolutionChain": [
+      {
+        "specy": [
+          {
+            "id": 1,
+            "enName": "bulbasaur",
+            "pokemonInfo": [
+              {
+                "types": [
+                  {
+                    "type": {
+                      "name": "grass"
+                    }
+                  },
+                  {
+                    "type": {
+                      "name": "poison"
+                    }
+                  }
+                ]
+              }
+            ],
+            "koName": [
+              {
+                "name": "이상해씨"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "enName": "venusaur",
+            "pokemonInfo": [
+              {
+                "types": [
+                  {
+                    "type": {
+                      "name": "grass"
+                    }
+                  },
+                  {
+                    "type": {
+                      "name": "poison"
+                    }
+                  }
+                ]
+              },
+              {
+                "types": [
+                  {
+                    "type": {
+                      "name": "grass"
+                    }
+                  },
+                  {
+                    "type": {
+                      "name": "poison"
+                    }
+                  }
+                ]
+              },
+              {
+                "types": [
+                  {
+                    "type": {
+                      "name": "grass"
+                    }
+                  },
+                  {
+                    "type": {
+                      "name": "poison"
+                    }
+                  }
+                ]
+              }
+            ],
+            "koName": [
+              {
+                "name": "이상해꽃"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "enName": "ivysaur",
+            "pokemonInfo": [
+              {
+                "types": [
+                  {
+                    "type": {
+                      "name": "grass"
+                    }
+                  },
+                  {
+                    "type": {
+                      "name": "poison"
+                    }
+                  }
+                ]
+              }
+            ],
+            "koName": [
+              {
+                "name": "이상해풀"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
