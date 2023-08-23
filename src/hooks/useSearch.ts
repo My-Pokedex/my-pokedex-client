@@ -1,11 +1,14 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useQuery } from '@apollo/client';
 import { useSearchParams } from 'next/navigation';
+import { usePageStore } from '@/stores';
 import { GET_LIST } from '@/api/gql';
 import { CARDS_LIMIT } from '@/constants/values';
 
 function useSearch() {
   const searchParams = useSearchParams();
+  const { page, increasePage } = usePageStore();
+  const observerTarget = useRef(null);
 
   const keyword = searchParams.get('keyword');
   const type = searchParams.get('type');
@@ -17,17 +20,49 @@ function useSearch() {
     type: type === 'all' ? '' : type,
     sort: { [sortKey]: sortValue },
     lang: 'ko',
+    offset: page * CARDS_LIMIT,
   };
 
-  const { loading, error, data, refetch } = useQuery(GET_LIST, {
-    variables,
-  });
+  const { loading, error, data, refetch, fetchMore, client } = useQuery(
+    GET_LIST,
+    {
+      variables,
+      fetchPolicy: 'cache-and-network',
+    },
+  );
+
+  const getMoreCards = () => {
+    increasePage();
+
+    fetchMore({ variables });
+  };
 
   useEffect(() => {
+    async () => await client.resetStore();
+
     refetch();
   }, [searchParams]);
 
-  return { loading, error, pokemonCardsInfo: data?.pokemonCardsInfo };
+  useEffect(() => {
+    if (observerTarget.current) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) getMoreCards();
+        },
+        { threshold: 1 },
+      );
+      observer.observe(observerTarget.current);
+
+      return () => observer.disconnect();
+    }
+  }, [getMoreCards]);
+
+  return {
+    loading,
+    error,
+    observerTarget,
+    pokemonCardsInfo: data?.pokemonCardsInfo,
+  };
 }
 
 export default useSearch;
