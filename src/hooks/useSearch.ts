@@ -7,7 +7,7 @@ import { CARDS_LIMIT } from '@/constants/values';
 
 function useSearch() {
   const searchParams = useSearchParams();
-  const { page, increasePage } = usePageStore();
+  const { page, isLastPage, increasePage, setLastPage } = usePageStore();
   const observerTarget = useRef(null);
 
   const keyword = searchParams.get('keyword');
@@ -34,12 +34,22 @@ function useSearch() {
   const getMoreCards = () => {
     increasePage();
 
-    fetchMore({ variables });
+    fetchMore({
+      variables,
+      updateQuery: (prev, { fetchMoreResult }) => {
+        if (!fetchMoreResult.pokemonCardsInfo.length) {
+          setLastPage(true);
+
+          return;
+        }
+      },
+    });
   };
 
   useEffect(() => {
     async () => await client.resetStore();
 
+    setLastPage(false);
     refetch();
   }, [searchParams]);
 
@@ -60,6 +70,7 @@ function useSearch() {
   return {
     loading,
     error,
+    isLastPage,
     observerTarget,
     pokemonCardsInfo: data?.pokemonCardsInfo,
   };
